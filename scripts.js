@@ -26,9 +26,9 @@ $(document).ready(function() {
             var containerTop = $(this).offset().top;
             var windowBottom = $(window).scrollTop() + $(window).height();
             if (windowBottom > containerTop + 100) {
-                $(this).css('transform', 'scale(1.03)');
+                $(this).css('transform', 'translateY(0)').css('opacity', '1');
             } else {
-                $(this).css('transform', 'scale(1)');
+                $(this).css('transform', 'translateY(50px)').css('opacity', '0');
             }
         });
     });
