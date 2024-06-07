@@ -30,6 +30,7 @@ nav ul {
     gap: 20px;
     margin: 0; /* Enlever la marge par défaut */
     padding: 0; /* Enlever le padding par défaut */
+    transform: translateX(-20px); /* Déplacer les boutons du menu à gauche */
 }
 
 nav ul li a {
