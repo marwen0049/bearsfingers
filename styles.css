@@ -1,40 +1,115 @@
-/* Styles pour le logo rond */
-.round-logo {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+/* Styles généraux */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Styles pour les images de service rondes */
-.round-image {
-    border-radius: 50%;
-}
-
-/* Styles pour le header transparent */
-.transparent-header {
-    background-color: transparent;
-}
-
-/* Styles pour le footer transparent */
-.transparent-footer {
-    background-color: transparent;
-}
-
-/* Popup */
-.service-popup {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 9999;
-}
-
-.popup-content {
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 20px;
-    border-radius: 10px;
+    background-color: #333;
     color: white;
 }
 
-/* Ajoutez des animations spécifiques pour chaque type de service */
+header .logo img {
+    height: 50px;
+    width: auto;
+}
 
-/* Régl
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+#carousel .item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#hero {
+    background: url('hero-image.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+#services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 50px 20px;
+}
+
+.service-card {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    text-align: center;
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+}
+
+.service-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+#about, #portfolio, #testimonials, #contact {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.social-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e68900;
+}
+
+@media (max-width: 768px) {
+    #services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card {
+        width: 80%;
+    }
+}
