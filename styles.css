@@ -9,7 +9,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 10px 20px; /* Hauteur réduite */
     background-color: rgba(51, 51, 51, 0.8);
     color: white;
     position: fixed;
@@ -19,8 +19,8 @@ header {
 }
 
 header .logo img {
-    height: 50px;
-    width: 50px;
+    height: 40px; /* Hauteur réduite */
+    width: 40px; /* Hauteur réduite */
     border-radius: 50%;
 }
 
@@ -28,11 +28,15 @@ nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
+    margin: 0; /* Enlever la marge par défaut */
+    padding: 0; /* Enlever le padding par défaut */
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
+    padding: 10px 15px; /* Pour plus de clarté des liens */
+    display: block;
 }
 
 #carousel .item img {
@@ -46,7 +50,7 @@ nav ul li a {
     color: white;
     text-align: center;
     padding: 100px 20px;
-    margin-top: 80px; /* Pour éviter la superposition avec le menu */
+    margin-top: 60px; /* Pour éviter la superposition avec le menu */
 }
 
 #services {
@@ -112,6 +116,7 @@ footer {
     color: white;
     text-align: center;
     padding: 20px;
+    position: relative;
 }
 
 .social-links a {
