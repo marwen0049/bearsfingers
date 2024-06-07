@@ -198,3 +198,31 @@ button:hover {
         transform: translateX(-50%);
     }
 }
+
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    text-align: center;
+    margin: 10px;
+    flex: 1 1 calc(33.333% - 20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.project-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 1em;
+    color: #333;
+}
