@@ -139,6 +139,17 @@ nav ul li a {
     padding: 0 10px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     transform: translateY(-50%);
+    position: relative;
+}
+
+.align-left {
+    text-align: left;
+    left: 0;
+}
+
+.align-right {
+    text-align: right;
+    right: 0;
 }
 
 footer {
@@ -180,21 +191,10 @@ button:hover {
     .container {
         width: 90%;
     }
-}
 
-.container {
-    padding: 50px 20px;
-    text-align: center;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    margin: 0 auto;
-    max-width: 800px; /* Limite la largeur du conteneur */
-    transition: background-color 0.3s, transform 0.3s, opacity 0.3s;
-    transform: translateY(50px);
-    opacity: 0;
+    .align-left, .align-right {
+        text-align: center;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
-
-.container:hover {
-    transform: scale(1.03);
-}
-
