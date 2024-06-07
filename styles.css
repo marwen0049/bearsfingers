@@ -148,3 +148,21 @@ button:hover {
         width: 80%;
     }
 }
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacement entre les icônes */
+    margin-top: 10px; /* Espacement au-dessus des icônes */
+}
+
+.social-links a {
+    color: white;
+    font-size: 20px; /* Taille des icônes */
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #ff9800; /* Couleur des icônes au survol */
+}
+
