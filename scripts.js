@@ -1,8 +1,10 @@
 document.querySelectorAll('.service-card').forEach(card => {
     card.addEventListener('mouseover', () => {
-        card.style.transform = 'scale(1.05)';
+        const image = card.querySelector('.service-image');
+        image.style.animation = 'vibrate 0.3s infinite';
     });
     card.addEventListener('mouseout', () => {
-        card.style.transform = 'scale(1)';
+        const image = card.querySelector('.service-image');
+        image.style.animation = 'move 2s infinite alternate';
     });
 });
