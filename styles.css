@@ -181,3 +181,20 @@ button:hover {
         width: 90%;
     }
 }
+
+.container {
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin: 0 auto;
+    max-width: 800px; /* Limite la largeur du conteneur */
+    transition: background-color 0.3s, transform 0.3s, opacity 0.3s;
+    transform: translateY(50px);
+    opacity: 0;
+}
+
+.container:hover {
+    transform: scale(1.03);
+}
+
