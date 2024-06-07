@@ -19,4 +19,17 @@ $(document).ready(function() {
             image.style.animation = 'move 2s infinite alternate';
         });
     });
+
+    // Animation des conteneurs au défilement
+    $(window).on('scroll', function() {
+        $('.container').each(function() {
+            var containerTop = $(this).offset().top;
+            var windowBottom = $(window).scrollTop() + $(window).height();
+            if (windowBottom > containerTop + 100) {
+                $(this).css('transform', 'scale(1.03)');
+            } else {
+                $(this).css('transform', 'scale(1)');
+            }
+        });
+    });
 });
