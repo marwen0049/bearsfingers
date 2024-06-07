@@ -98,115 +98,130 @@ nav ul li a {
 @keyframes vibrate {
     0%, 100% { transform: translateX(0); }
     25% { transform: translateX(-2px); }
-    75% { transform: translateX(2px); }
+    50% { transform: translateX(2px); }
+    75% { transform: translateX(-2px); }
 }
 
-h2 {
-    color: #333;
-    font-size: 1.5em;
-    margin: 10px 0;
-}
-
-p {
-    color: #666;
-    line-height: 1.5;
-    margin-bottom: 0;
-}
+#graphic-design { background-color: #616161; color: white; }
+#branding { background-color: #f5c6a5; color: #333; }
+#digital-marketing { background-color: #ff9800; color: white; }
+#analysis-strategy { background-color: #81d4fa; color: #333; }
+#web-development { background-color: #4e342e; color: white; }
 
 .container {
-    max-width: 1200px;
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
     margin: 0 auto;
-    padding: 0 20px;
+    max-width: 800px; /* Limite la largeur du conteneur */
+    transition: background-color 0.3s, transform 0.3s, opacity 0.3s;
+    transform: translateY(50px);
+    opacity: 0;
 }
 
-.about, .portfolio, .testimonials, .contact {
-    padding: 50px 20px;
+.container:hover {
+    transform: scale(1.03);
 }
+
+.about { background-color: #616161; color: white; }
+.portfolio { background-color: #f5c6a5; color: #333; }
+.testimonials { background-color: #ff9800; color: white; }
+.contact { background-color: #81d4fa; color: #333; }
 
 .section-title {
     text-align: center;
-    margin-bottom: 30px;
-    font-size: 2em;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    background-color: white;
+    color: #333;
+    display: inline-block;
+    padding: 0 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transform: translateY(-50%);
+    position: relative;
+}
+
+.align-left {
+    text-align: left;
+    left: 0;
+}
+
+.align-right {
+    text-align: right;
+    right: 0;
+}
+
+footer {
+    background-color: rgba(51, 51, 51, 0.8);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+.social-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e68900;
+}
+
+@media (max-width: 768px) {
+    #services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card {
+        width: 80%;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .align-left, .align-right {
+        text-align: center;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
 
 .gallery {
     display: flex;
+    justify-content: space-around;
     flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
 }
 
 .project-card {
-    width: 30%;
-    margin-bottom: 20px;
     text-align: center;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin: 10px;
+    flex: 1 1 calc(33.333% - 20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 10px;
     border-radius: 10px;
 }
 
-.project-image {
-    width: 100%;
-    height: auto;
-    display: block;
+.project-card img {
+    width: 100px; /* Réduit la largeur de l'image */
+    height: 100px; /* Réduit la hauteur de l'image */
+    border-radius: 50%;
+    object-fit: cover;
     margin-bottom: 10px;
 }
 
-blockquote {
-    font-style: italic;
-    margin: 20px 0;
-    padding: 10px;
-    background-color: #f9f9f9;
-    border-left: 5px solid #ccc;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-form input, form textarea, form button {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+.project-card p {
     font-size: 1em;
-}
-
-form button {
-    background-color: #333;
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-form button:hover {
-    background-color: #555;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-footer .social-links {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 10px;
-}
-
-footer .social-links a {
-    color: white;
-    font-size: 1.2em;
-    transition: color 0.3s;
-}
-
-footer .social-links a:hover {
-    color: #aaa;
-}
+    
