@@ -165,4 +165,10 @@ button:hover {
 .social-links a:hover {
     color: #ff9800; /* Couleur des icônes au survol */
 }
+.container {
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
 
