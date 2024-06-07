@@ -1,21 +1,24 @@
-document.querySelectorAll('.service-card').forEach(card => {
-    card.addEventListener('mouseover', () => {
-        const serviceType = card.classList[1]; // Obtenez la deuxième classe qui identifie le type de service
-        const image = card.querySelector('.service-image');
-        switch (serviceType) {
-            case 'graphic-design':
-                image.style.animation = 'vibrate-graphic-design 0.3s infinite'; // Animation spécifique pour le design graphique
-                break;
-            case 'branding':
-                image.style.animation = 'vibrate-branding 0.3s infinite'; // Animation spécifique pour le branding
-                break;
-            // Ajoutez d'autres cas pour d'autres types de services si nécessaire
-            default:
-                image.style.animation = 'vibrate 0.3s infinite'; // Animation par défaut
-        }
-    });
-    card.addEventListener('mouseout', () => {
-        const image = card.querySelector('.service-image');
-        image.style.animation = 'move 2s infinite alternate'; // Réinitialisez l'animation lorsqu'on quitte le survol
-    });
-});
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Vos styles CSS existants */
+
+@keyframes vibrate-graphic-design {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-2px); }
+    50% { transform: translateX(2px); }
+    75% { transform: translateX(-2px); }
+}
+
+@keyframes vibrate-branding {
+    0%, 100% { transform: translateY(0); }
+    25% { transform: translateY(-2px); }
+    50% { transform: translateY(2px); }
+    75% { transform: translateY(-2px); }
+}
+
+/* Ajoutez d'autres animations spécifiques pour d'autres types de services si nécessaire */
