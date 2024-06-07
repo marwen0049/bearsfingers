@@ -5,20 +5,134 @@ body {
     box-sizing: border-box;
 }
 
-/* Vos styles CSS existants */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
 
-@keyframes vibrate-graphic-design {
+header .logo img {
+    height: 50px;
+    width: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+#carousel .item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#hero {
+    background: url('hero-image.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+#services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 50px 20px;
+}
+
+.service-card {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    text-align: center;
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+}
+
+.service-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 10px;
+    animation: move 2s infinite alternate;
+    transition: transform 0.3s;
+}
+
+.service-card:hover .service-image {
+    animation: vibrate 0.3s infinite;
+}
+
+@keyframes move {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+@keyframes vibrate {
     0%, 100% { transform: translateX(0); }
     25% { transform: translateX(-2px); }
     50% { transform: translateX(2px); }
     75% { transform: translateX(-2px); }
 }
 
-@keyframes vibrate-branding {
-    0%, 100% { transform: translateY(0); }
-    25% { transform: translateY(-2px); }
-    50% { transform: translateY(2px); }
-    75% { transform: translateY(-2px); }
+#graphic-design { background-color: #616161; color: white; }
+#branding { background-color: #f5c6a5; color: #333; }
+#digital-marketing { background-color: #ff9800; color: white; }
+#analysis-strategy { background-color: #81d4fa; color: #333; }
+#web-development { background-color: #4e342e; color: white; }
+
+#about, #portfolio, #testimonials, #contact {
+    padding: 50px 20px;
+    text-align: center;
 }
 
-/* Ajoutez d'autres animations spécifiques pour d'autres types de services si nécessaire */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.social-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e68900;
+}
+
+@media (max-width: 768px) {
+    #services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card {
+        width: 80%;
+    }
+}
