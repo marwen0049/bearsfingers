@@ -1,14 +1,40 @@
-/* Styles précédents */
-
-@keyframes vibrate-graphic-design {
-    0%, 100% { transform: translateX(0); }
-    25% { transform: translateX(-2px); }
-    50% { transform: translateX(2px); }
-    75% { transform: translateX(-2px); }
+/* Styles pour le logo rond */
+.round-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
 }
 
-@keyframes vibrate-branding {
-    /* Animation spécifique pour le branding */
+/* Styles pour les images de service rondes */
+.round-image {
+    border-radius: 50%;
 }
 
-/* Ajoutez d'autres animations spécifiques pour d'autres types de services si nécessaire */
+/* Styles pour le header transparent */
+.transparent-header {
+    background-color: transparent;
+}
+
+/* Styles pour le footer transparent */
+.transparent-footer {
+    background-color: transparent;
+}
+
+/* Popup */
+.service-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
+.popup-content {
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+/* Ajoutez des animations spécifiques pour chaque type de service */
+
+/* Régl
