@@ -215,8 +215,8 @@ button:hover {
 }
 
 .project-card img {
-    width: 150px;
-    height: 150px;
+    width: 100px; /* Réduit la largeur de l'image */
+    height: 100px; /* Réduit la hauteur de l'image */
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 10px;
@@ -224,5 +224,4 @@ button:hover {
 
 .project-card p {
     font-size: 1em;
-    color: #333;
-}
+    
