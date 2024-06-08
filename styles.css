@@ -1,7 +1,7 @@
 body {
     font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
+    margin: 1;
+    padding: 1;
     box-sizing: border-box;
 }
 
@@ -30,6 +30,7 @@ nav ul {
     gap: 20px;
     margin: 0;
     padding: 0;
+    transform: translateX(-20px);
 }
 
 nav ul li a {
@@ -39,10 +40,6 @@ nav ul li a {
     display: block;
 }
 
-#carousel {
-    margin-top: 60px; /* Assurez-vous que le carrousel commence sous la barre de menu */
-}
-
 #carousel .item img {
     width: 100%;
     height: auto;
@@ -50,10 +47,11 @@ nav ul li a {
 }
 
 #hero {
-    background: linear-gradient(135deg, #ff9800, #ff5722);
-    color: white;
+    background: url('hero-image.jpg') no-repeat center center/cover;
+    color: black;
     text-align: center;
     padding: 100px 20px;
+    margin-top: 60px;
 }
 
 #services {
@@ -226,4 +224,4 @@ button:hover {
 
 .project-card p {
     font-size: 1em;
-}
+    
