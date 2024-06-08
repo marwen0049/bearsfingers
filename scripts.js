@@ -32,16 +32,18 @@ $(document).ready(function() {
             }
         });
     });
-});
-document.addEventListener('DOMContentLoaded', function() {
+
+    // Gestion du menu pour mobile
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
-    const themeToggle = document.querySelector('.theme-toggle');
-    const root = document.documentElement;
 
     menuToggle.addEventListener('click', () => {
         navLinks.classList.toggle('active');
     });
+
+    // Gestion du thème
+    const themeToggle = document.querySelector('.theme-toggle');
+    const root = document.documentElement;
 
     themeToggle.addEventListener('click', () => {
         if (root.getAttribute('data-theme') === 'dark') {
@@ -53,6 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // Initialiser à nouveau le carrousel (si nécessaire)
     $(".owl-carousel").owlCarousel({
         items: 1,
         loop: true,
@@ -62,3 +65,28 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// Ajouter un écouteur d'événements pour s'assurer que le menu ne s'affiche que sur mobile
+window.addEventListener('resize', () => {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    if (window.innerWidth <= 768) {
+        menuToggle.style.display = 'block';
+        navLinks.style.display = 'none';
+    } else {
+        menuToggle.style.display = 'none';
+        navLinks.style.display = 'flex';
+    }
+});
+
+// Initialiser l'état correct du menu au chargement de la page
+window.addEventListener('load', () => {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    if (window.innerWidth <= 768) {
+        menuToggle.style.display = 'block';
+        navLinks.style.display = 'none';
+    } else {
+        menuToggle.style.display = 'none';
+        navLinks.style.display = 'flex';
+    }
+});
