@@ -64,33 +64,21 @@ $(document).ready(function() {
         autoplayTimeout: 3000
     });
 
-    // Ajouter un écouteur d'événements pour s'assurer que le menu ne s'affiche que sur mobile
-    window.addEventListener('resize', () => {
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navLinks = document.querySelector('.nav-links');
+    // Gestion de l'affichage du menu en fonction de la taille de la fenêtre
+    const adjustMenuDisplay = () => {
         if (window.innerWidth <= 768) {
             menuToggle.style.display = 'block';
-            if (!navLinks.classList.contains('active')) {
-                navLinks.style.display = 'none';
-            }
+            navLinks.classList.contains('active') ? navLinks.style.display = 'flex' : navLinks.style.display = 'none';
         } else {
             menuToggle.style.display = 'none';
             navLinks.style.display = 'flex';
         }
-    });
+    };
 
-    // Initialiser l'état correct du menu au chargement de la page
-    window.addEventListener('load', () => {
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navLinks = document.querySelector('.nav-links');
-        if (window.innerWidth <= 768) {
-            menuToggle.style.display = 'block';
-            if (!navLinks.classList.contains('active')) {
-                navLinks.style.display = 'none';
-            }
-        } else {
-            menuToggle.style.display = 'none';
-            navLinks.style.display = 'flex';
-        }
-    });
+    // Écouteurs d'événements pour ajuster le menu au redimensionnement et au chargement de la page
+    window.addEventListener('resize', adjustMenuDisplay);
+    window.addEventListener('load', adjustMenuDisplay);
+
+    // Appeler immédiatement pour définir l'état initial correct
+    adjustMenuDisplay();
 });
