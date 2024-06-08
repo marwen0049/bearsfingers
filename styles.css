@@ -95,14 +95,7 @@ nav ul li a {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    display: block;
-    margin: 0 auto 10px;
-    animation: move 2s infinite alternate;
-    transition: transform 0.3s;
-}
-
-.service-card:hover .service-image {
-    animation: vibrate 0.3s infinite;
+    margin-bottom: 10px;
 }
 
 @keyframes move {
