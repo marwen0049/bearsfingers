@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 header {
@@ -10,7 +11,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #5c5c5c;
+    background-color: rgba(92, 92, 92, 1);
     color: white;
     position: fixed;
     width: 100%;
@@ -24,12 +25,7 @@ header .logo img {
     border-radius: 50%;
 }
 
-nav {
-    display: flex;
-    align-items: center;
-}
-
-.nav-links {
+nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
@@ -37,7 +33,7 @@ nav {
     padding: 0;
 }
 
-.nav-links li a {
+nav ul li a {
     color: white;
     text-decoration: none;
     padding: 10px 15px;
@@ -46,9 +42,6 @@ nav {
 
 .menu-toggle {
     display: none;
-    background: none;
-    border: none;
-    color: white;
     font-size: 1.5em;
     cursor: pointer;
 }
@@ -56,6 +49,13 @@ nav {
 .theme-toggle {
     font-size: 1.5em;
     cursor: pointer;
+    margin-left: 20px;
+}
+
+#carousel .item img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 #hero {
@@ -66,12 +66,93 @@ nav {
     margin-top: 60px;
 }
 
-/* Media Queries */
+#services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 50px 20px;
+}
+
+.service-card {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.service-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 10px;
+    animation: move 2s infinite alternate;
+    transition: transform 0.3s;
+}
+
+.service-card:hover .service-image {
+    animation: vibrate 0.3s infinite;
+}
+
+@keyframes move {
+    0% { transform: translateY(0); }
+     100% { transform: translateY(-10px); }
+}
+
+@keyframes vibrate {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-2px); }
+    75% { transform: translateX(2px); }
+}
+
+#about, #portfolio, #testimonials, #contact {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.project-card {
+    width: 30%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
 @media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
     .nav-links {
         display: none;
         flex-direction: column;
-        background-color: rgba(92,92,92,0.9);
+        background-color: rgba(92, 92, 92, 0.9);
         position: absolute;
         top: 60px;
         right: 0;
@@ -83,35 +164,45 @@ nav {
         display: flex;
     }
 
-    .menu-toggle {
-        display: block;
+    .service-card, .project-card {
+        width: 100%;
+    }
+
+    #hero {
+        padding: 80px 20px;
     }
 }
 
-:root {
-    --background-color: #fff;
-    --text-color: #333;
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none;
+    }
+
+    .nav-links {
+        display: flex !important;
+    }
 }
 
+/* Light and Dark theme styles */
 [data-theme="dark"] {
-    --background-color: #333;
-    --text-color: #fff;
+    background-color: #121212;
+    color: #ffffff;
 }
 
-body {
-    background-color: var(--background-color);
-    color: var(--text-color);
+[data-theme="dark"] header {
+    background-color: rgba(33, 33, 33, 1);
 }
 
-header {
-    background-color: var(--background-color);
-    color: var(--text-color);
+[data-theme="dark"] .nav-links a {
+    color: #ffffff;
 }
 
-nav ul li a {
-    color: var(--text-color);
+[data-theme="dark"] .service-card, 
+[data-theme="dark"] .project-card {
+    background-color: #333333;
+    color: #ffffff;
 }
 
-.theme-toggle i {
-    color: var(--text-color);
+[data-theme="dark"] .theme-toggle i {
+    color: #ffffff;
 }
