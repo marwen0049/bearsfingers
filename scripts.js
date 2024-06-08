@@ -63,30 +63,34 @@ $(document).ready(function() {
         autoplay: true,
         autoplayTimeout: 3000
     });
-});
 
-// Ajouter un écouteur d'événements pour s'assurer que le menu ne s'affiche que sur mobile
-window.addEventListener('resize', () => {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    if (window.innerWidth <= 768) {
-        menuToggle.style.display = 'block';
-        navLinks.style.display = 'none';
-    } else {
-        menuToggle.style.display = 'none';
-        navLinks.style.display = 'flex';
-    }
-});
+    // Ajouter un écouteur d'événements pour s'assurer que le menu ne s'affiche que sur mobile
+    window.addEventListener('resize', () => {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        if (window.innerWidth <= 768) {
+            menuToggle.style.display = 'block';
+            if (!navLinks.classList.contains('active')) {
+                navLinks.style.display = 'none';
+            }
+        } else {
+            menuToggle.style.display = 'none';
+            navLinks.style.display = 'flex';
+        }
+    });
 
-// Initialiser l'état correct du menu au chargement de la page
-window.addEventListener('load', () => {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    if (window.innerWidth <= 768) {
-        menuToggle.style.display = 'block';
-        navLinks.style.display = 'none';
-    } else {
-        menuToggle.style.display = 'none';
-        navLinks.style.display = 'flex';
-    }
+    // Initialiser l'état correct du menu au chargement de la page
+    window.addEventListener('load', () => {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        if (window.innerWidth <= 768) {
+            menuToggle.style.display = 'block';
+            if (!navLinks.classList.contains('active')) {
+                navLinks.style.display = 'none';
+            }
+        } else {
+            menuToggle.style.display = 'none';
+            navLinks.style.display = 'flex';
+        }
+    });
 });
