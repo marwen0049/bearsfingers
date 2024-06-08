@@ -33,3 +33,32 @@ $(document).ready(function() {
         });
     });
 });
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const themeToggle = document.querySelector('.theme-toggle');
+    const root = document.documentElement;
+
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+
+    themeToggle.addEventListener('click', () => {
+        if (root.getAttribute('data-theme') === 'dark') {
+            root.setAttribute('data-theme', 'light');
+            themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        } else {
+            root.setAttribute('data-theme', 'dark');
+            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        }
+    });
+
+    $(".owl-carousel").owlCarousel({
+        items: 1,
+        loop: true,
+        nav: true,
+        autoplay: true,
+        autoplayTimeout: 3000
+    });
+});
+
