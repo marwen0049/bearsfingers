@@ -113,96 +113,106 @@ nav ul li a {
     75% { transform: translateX(2px); }
 }
 
-#about, #portfolio, #testimonials, #contact {
-    padding: 50px 20px;
-    text-align: center;
+.container {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: transform 0.5s, opacity 0.5s;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    transform: translateY(50px);
-    opacity: 0;
-    transition: transform 0.5s, opacity 0.5s;
+.container.about, .container.portfolio, .container.testimonials, .container.contact {
+    padding: 50px 20px;
+    margin-top: 20px;
 }
 
 .gallery {
     display: flex;
     flex-wrap: wrap;
+    gap: 20px;
     justify-content: space-around;
 }
 
 .project-card {
     width: 30%;
-    margin-bottom: 20px;
     text-align: center;
 }
 
 .project-image {
     width: 100%;
-    height: auto;
     border-radius: 10px;
 }
 
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        background-color: rgba(92, 92, 92, 0.9);
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 100%;
-        padding: 10px 0;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .service-card, .project-card {
-        width: 100%;
-    }
-
-    #hero {
-        padding: 80px 20px;
-    }
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-@media (min-width: 769px) {
-    .menu-toggle {
-        display: none;
-    }
-
-    .nav-links {
-        display: flex !important;
-    }
+form input, form textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
-/* Light and Dark theme styles */
-[data-theme="dark"] {
+form button {
+    padding: 10px;
+    border: none;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+body[data-theme="light"] {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+body[data-theme="dark"] {
     background-color: #121212;
     color: #ffffff;
 }
 
-[data-theme="dark"] header {
+header[data-theme="dark"] {
     background-color: rgba(33, 33, 33, 1);
 }
 
-[data-theme="dark"] .nav-links a {
-    color: #ffffff;
+.nav-links a {
+    color: inherit; /* Ensures links inherit the correct color based on theme */
 }
 
-[data-theme="dark"] .service-card, 
-[data-theme="dark"] .project-card {
-    background-color: #333333;
-    color: #ffffff;
+.nav-links.active {
+    display: flex;
 }
 
-[data-theme="dark"] .theme-toggle i {
-    color: #ffffff;
+.menu-toggle, .theme-toggle {
+    color: inherit; /* Ensures icons inherit the correct color based on theme */
+}
+
+/* Ensure mobile menu items are visible */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hidden by default */
+        flex-direction: column;
+        background-color: rgba(92, 92, 92, 1); /* Adjust the color as needed */
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: flex; /* Displayed when active */
+    }
+
+    .menu-toggle {
+        display: block; /* Show the menu toggle icon on mobile */
+    }
+
+    nav ul li a {
+        padding: 15px 20px; /* Adjust padding for mobile view */
+    }
 }
