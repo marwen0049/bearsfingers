@@ -1,21 +1,10 @@
-/* Basic resets */
-* {
+body {
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body styling */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
-}
-
-/* Header styling */
 header {
     display: flex;
     justify-content: space-between;
@@ -51,21 +40,12 @@ nav ul li a {
     display: block;
 }
 
-/* Carousel styling */
-#carousel {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1em 0;
-}
-
-.owl-carousel .item img {
-    display: block;
+#carousel .item img {
     width: 100%;
     height: auto;
+    display: block;
 }
 
-/* Hero section styling */
 #hero {
     background: url('hero-image.jpg') no-repeat center center/cover;
     color: white;
@@ -74,15 +54,6 @@ nav ul li a {
     margin-top: 60px;
 }
 
-#hero h1 {
-    /* Keep the style as is */
-}
-
-#hero button {
-    /* Keep the style as is */
-}
-
-/* Services section styling */
 #services {
     display: flex;
     flex-wrap: wrap;
@@ -131,54 +102,56 @@ nav ul li a {
     75% { transform: translateX(-2px); }
 }
 
-/* About section styling */
-#about {
-    /* Restore the original style */
-}
+#graphic-design { background-color: #616161; color: white; }
+#branding { background-color: #f5c6a5; color: #333; }
+#digital-marketing { background-color: #ff9800; color: white; }
+#analysis-strategy { background-color: #81d4fa; color: #333; }
+#web-development { background-color: #4e342e; color: white; }
 
-/* Portfolio section styling */
-#portfolio {
-    /* Restore the original style */
-}
-
-.gallery {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.project-card {
+.container {
+    padding: 50px 20px;
     text-align: center;
-    margin: 10px;
-    flex: 1 1 calc(33.333% - 20px);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 10px;
     border-radius: 10px;
+    margin-bottom: 20px;
+    margin: 0 auto;
+    max-width: 800px; /* Limite la largeur du conteneur */
+    transition: background-color 0.3s, transform 0.3s, opacity 0.3s;
+    transform: translateY(50px);
+    opacity: 0;
 }
 
-.project-card img {
-    width: 100px; /* Réduit la largeur de l'image */
-    height: 100px; /* Réduit la hauteur de l'image */
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 10px;
+.container:hover {
+    transform: scale(1.03);
 }
 
-.project-card p {
-    font-size: 1em;
+.about { background-color: #616161; color: white; }
+.portfolio { background-color: #f5c6a5; color: #333; }
+.testimonials { background-color: #ff9800; color: white; }
+.contact { background-color: #81d4fa; color: #333; }
+
+.section-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    background-color: white;
+    color: #333;
+    display: inline-block;
+    padding: 0 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transform: translateY(-50%);
+    position: relative;
 }
 
-/* Testimonials section styling */
-#testimonials {
-    /* Restore the original style */
+.align-left {
+    text-align: left;
+    left: 0;
 }
 
-/* Contact section styling */
-#contact {
-    /* Restore the original style */
+.align-right {
+    text-align: right;
+    right: 0;
 }
 
-/* Footer styling */
 footer {
     background-color: rgba(51, 51, 51, 0.8);
     color: white;
@@ -206,5 +179,49 @@ button:hover {
 }
 
 @media (max-width: 768px) {
-    /* Add responsive styles if needed */
+    #services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card {
+        width: 80%;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .align-left, .align-right {
+        text-align: center;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
+
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    text-align: center;
+    margin: 10px;
+    flex: 1 1 calc(33.333% - 20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.project-card img {
+    width: 100px; /* Réduit la largeur de l'image */
+    height: 100px; /* Réduit la hauteur de l'image */
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 1em;
+    
