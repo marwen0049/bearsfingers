@@ -9,10 +9,10 @@ body {
 /* Header styles */
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Centre les éléments du menu */
     align-items: center;
     padding: 10px 20px;
-    background-color: rgba(255, 255, 255, 0.8); /* Blanc transparent */
+    background-color: transparent; /* Transparent */
     color: #333; /* Couleur du texte dans le header */
     position: fixed;
     width: 100%;
@@ -25,6 +25,11 @@ header .logo img {
     height: 40px;
     width: 40px;
     border-radius: 50%;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
 }
 
 nav ul {
@@ -52,6 +57,46 @@ nav ul li a:hover {
     0% { transform: translateY(0); }
     50% { transform: translateY(-5px); }
     100% { transform: translateY(0); }
+}
+
+/* Dark mode toggle */
+.dark-mode-toggle {
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: #ff9800; /* Orange */
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode header {
+    background-color: rgba(18, 18, 18, 0.8);
+}
+
+body.dark-mode nav ul li a {
+    color: #e0e0e0;
+}
+
+body.dark-mode .dark-mode-toggle {
+    color: #e0e0e0;
+}
+
+body.dark-mode .service-card {
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+body.dark-mode .about,
+body.dark-mode .portfolio,
+body.dark-mode .testimonials,
+body.dark-mode .contact {
+    background-color: #333;
+    color: #e0e0e0;
 }
 
 /* Carousel styles */
