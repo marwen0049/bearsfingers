@@ -9,7 +9,7 @@ body {
 /* Header styles */
 header {
     display: flex;
-    justify-content: center; /* Centre les éléments du menu */
+    justify-content: space-between; /* Space between logo and nav */
     align-items: center;
     padding: 10px 20px;
     background-color: rgba(78, 52, 46, 0.8); /* Couleur #4E342E avec transparence */
@@ -62,7 +62,7 @@ nav ul li a:hover {
 /* Dark mode toggle */
 .dark-mode-toggle {
     position: absolute;
-    right: 20px;
+    right: 40px; /* Moved to the left */
     cursor: pointer;
     font-size: 1.5em;
     color: #ff9800; /* Orange */
@@ -245,6 +245,19 @@ button:hover {
 
 /* Responsive styles */
 @media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dark-mode-toggle {
+        right: 20px; /* Adjust for better positioning on smaller screens */
+    }
+
     #services {
         flex-direction: column;
         align-items: center;
