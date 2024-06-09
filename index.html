@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"> <!-- Changer la langue à l'anglais -->
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +13,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div id="header-placeholder"></div>
+    <header>
+        <div class="logo">
+            <img src="logo.jpg" alt="Logo de Big Bears Marketing">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#hero">Accueil</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#testimonials">Témoignages</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="dark-mode-toggle" id="dark-mode-toggle">
+            <i class="fas fa-moon"></i>
+        </div>
+    </header>
 
     <section id="carousel">
         <div class="owl-carousel owl-theme">
@@ -24,8 +41,8 @@
     </section>
 
     <section id="hero">
-        <h1>Transform Your Business with Big Bears Marketing</h1> <!-- Traduction en anglais -->
-        <button>Discover Our Services</button> <!-- Traduction en anglais -->
+        <h1>Transformez votre entreprise avec Big Bears Marketing</h1>
+        <button>Découvrez nos services</button>
     </section>
 
     <section id="services">
@@ -58,33 +75,33 @@
 
     <section id="about">
         <div class="container about">
-            <h2>About Us</h2> <!-- Traduction en anglais -->
-            <p>We are a marketing agency passionate about transforming businesses.</p> <!-- Traduction en anglais -->
+            <h2>À propos de nous</h2>
+            <p>Nous sommes une agence de marketing passionnée par la transformation des entreprises.</p>
         </div>
     </section>
 
     <section id="portfolio">
         <div class="container portfolio">
-            <h2>Our Brain Team</h2> <!-- Traduction en anglais -->
+            <h2>Our Brain Team</h2>
             <div class="gallery">
                 <div class="project-card graphic-design">
-                    <img src="logo.jpg" alt="Project 1" class="project-image"> <!-- Traduction en anglais -->
+                    <img src="logo.jpg" alt="Projet 1" class="project-image">
                     <p>Pink Bears</p>
                 </div>
                 <div class="project-card branding">
-                    <img src="logo.jpg" alt="Project 2" class="project-image"> <!-- Traduction en anglais -->
+                    <img src="logo.jpg" alt="Projet 2" class="project-image">
                     <p>Orange Bears</p>
                 </div>
                 <div class="project-card digital-marketing">
-                    <img src="logo.jpg" alt="Project 3" class="project-image"> <!-- Traduction en anglais -->
+                    <img src="logo.jpg" alt="Projet 3" class="project-image">
                     <p>Blue Bears</p>
                 </div>
                 <div class="project-card analysis-strategy">
-                    <img src="logo.jpg" alt="Project 4" class="project-image"> <!-- Traduction en anglais -->
+                    <img src="logo.jpg" alt="Projet 4" class="project-image">
                     <p>Black Bears</p>
                 </div>
                 <div class="project-card web-development">
-                    <img src="logo.jpg" alt="Project 5" class="project-image"> <!-- Traduction en anglais -->
+                    <img src="logo.jpg" alt="Projet 5" class="project-image">
                     <p>Double Bears</p>
                 </div>
             </div>
@@ -93,36 +110,39 @@
 
     <section id="testimonials">
         <div class="container testimonials">
-            <h2>Testimonials</h2> <!-- Traduction en anglais -->
-            <blockquote>"An amazing team that transformed our brand!" - Client A</blockquote> <!-- Traduction en anglais -->
-            <blockquote>"Fantastic results and excellent service." - Client B</blockquote> <!-- Traduction en anglais -->
+            <h2>Témoignages</h2>
+            <blockquote>"Une équipe incroyable qui a transformé notre marque!" - Client A</blockquote>
+            <blockquote>"Des résultats fantastiques et un service excellent." - Client B</blockquote>
         </div>
     </section>
 
     <section id="contact">
         <div class="container contact">
-            <h2>Contact Us</h2> <!-- Traduction en anglais -->
+            <h2>Contactez-nous</h2>
             <form>
-                <input type="text" placeholder="Your name"> <!-- Traduction en anglais -->
-                <input type="email" placeholder="Your email"> <!-- Traduction en anglais -->
-                <textarea placeholder="Your message"></textarea> <!-- Traduction en anglais -->
-                <button type="submit">Send</button> <!-- Traduction en anglais -->
+                <input type="text" placeholder="Votre nom">
+                <input type="email" placeholder="Votre email">
+                <textarea placeholder="Votre message"></textarea>
+                <button type="submit">Envoyer</button>
             </form>
         </div>
     </section>
 
-    <div id="footer-placeholder"></div>
+    <footer>
+        <p>&copy; 2024 Big Bears Marketing Agency. Tous droits réservés.</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
 
     <!-- Lien vers le fichier JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
     <script>
         $(document).ready(function() {
-            // Charger le header
-            $("#header-placeholder").load("header.html");
-            // Charger le footer
-            $("#footer-placeholder").load("footer.html");
-
             $('.owl-carousel').owlCarousel({
                 items: 1,
                 loop: true,
@@ -147,11 +167,6 @@
                 $('body').toggleClass('dark-mode');
                 const icon = $(this).find('i');
                 icon.toggleClass('fa-moon fa-sun');
-            });
-
-            // Toggle menu on mobile
-            $('#menu-toggle').click(function() {
-                $('nav').toggleClass('active');
             });
         });
     </script>

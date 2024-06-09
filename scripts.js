@@ -32,14 +32,4 @@ $(document).ready(function() {
             }
         });
     });
-
-    // Toggle dark mode
-    $('.dark-mode-toggle').click(function() {
-        $('body').toggleClass('dark-mode');
-    });
-
-    // Toggle menu on mobile
-    $('#menu-toggle').click(function() {
-        $('nav ul').toggleClass('active');
-    });
 });
