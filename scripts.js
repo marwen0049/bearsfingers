@@ -32,4 +32,32 @@ $(document).ready(function() {
             }
         });
     });
+
+    // Basculer le mode sombre
+    $('.dark-mode-toggle').on('click', function() {
+        $('body').toggleClass('dark-mode');
+        $('header').toggleClass('dark-mode');
+        var icon = $(this).find('i');
+        if ($('body').hasClass('dark-mode')) {
+            icon.removeClass('fa-moon').addClass('fa-sun');
+        } else {
+            icon.removeClass('fa-sun').addClass('fa-moon');
+        }
+    });
+
+    // Afficher le menu en cliquant sur le logo sur les mobiles et tablettes
+    $('.logo').on('click', function() {
+        if ($(window).width() <= 768) {
+            $('nav ul').toggleClass('active');
+        }
+    });
+
+    // Cacher le menu si on clique en dehors de celui-ci
+    $(document).on('click', function(event) {
+        if (!$(event.target).closest('.logo, nav').length) {
+            if ($(window).width() <= 768) {
+                $('nav ul').removeClass('active');
+            }
+        }
+    });
 });
