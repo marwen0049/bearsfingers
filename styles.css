@@ -1,9 +1,16 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: transparent; /* Changer de transparent */
+    background-color: transparent;
     color: white;
     position: fixed;
     width: 100%;
@@ -17,7 +24,6 @@ nav ul {
     gap: 20px;
     margin: 0;
     padding: 0;
-    transform: translateX(-20px);
 }
 
 nav ul.active {
@@ -39,3 +45,15 @@ nav ul.active {
         display: flex;
     }
 }
+
+.dark-mode-toggle {
+    cursor: pointer;
+}
+
+.owl-carousel .item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Ajoutez d'autres styles nécessaires */
