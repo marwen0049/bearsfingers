@@ -9,7 +9,7 @@ body {
 /* Header styles */
 header {
     display: flex;
-    justify-content: space-between; /* Space between logo and nav */
+    justify-content: center; /* Center the menu items */
     align-items: center;
     padding: 10px 20px;
     background-color: rgba(78, 52, 46, 0.8); /* Couleur #4E342E avec transparence */
@@ -29,12 +29,14 @@ header .logo img {
 
 nav {
     display: flex;
+    justify-content: center; /* Center the nav items */
     gap: 20px;
 }
 
 nav ul {
     list-style: none;
     display: flex;
+    justify-content: center; /* Center the ul items */
     gap: 20px;
     margin: 0;
     padding: 0;
