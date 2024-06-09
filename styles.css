@@ -1,4 +1,4 @@
-/* Base styles */
+/* Styles de base */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -25,6 +25,7 @@ header .logo img {
     height: 40px;
     width: 40px;
     border-radius: 50%;
+    cursor: pointer; /* Ajoute le curseur pointeur pour indiquer que le logo est cliquable */
 }
 
 nav {
@@ -254,6 +255,11 @@ button:hover {
     nav ul {
         flex-direction: column;
         align-items: center;
+        display: none; /* Masquer le menu par défaut */
+    }
+
+    nav ul.active {
+        display: flex; /* Afficher le menu lorsqu'il est activé */
     }
 
     .service-card {
@@ -318,8 +324,8 @@ button:hover {
 }
 
 /* Specific styles for each project card */
-.project-card.graphic-design { background-color: #616161; color: white; }
-.project-card.branding { background-color: #f5c6a5; color: #333; }
-.project-card.digital-marketing { background-color: #ff9800; color: white; }
-.project-card.analysis-strategy { background-color: #81d4fa; color: #333; }
-.project-card.web-development { background-color: #4e342e; color: white; }
+.graphic-design { background-color: #616161; color: white; }
+.branding { background-color: #f5c6a5; color: #333; }
+.digital-marketing { background-color: #ff9800; color: white; }
+.analysis-strategy { background-color: #81d4fa; color: #333; }
+.web-development { background-color: #4e342e; color: white; }
