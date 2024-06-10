@@ -1,0 +1,316 @@
+/* Base styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: center; /* Center the menu items */
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(78, 52, 46, 0.8); /* Couleur #4E342E avec transparence */
+    color: #333; /* Couleur du texte dans le header */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+header .logo img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+nav {
+    display: flex;
+    justify-content: center; /* Center the nav items */
+    gap: 20px;
+    padding-left: 20px; /* Add padding to move nav items to the left */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Center the ul items */
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    color: #ff9800; /* Orange */
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: color 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover {
+    color: #e68900; /* Orange plus foncé */
+    animation: scrollText 0.3s ease-in-out;
+}
+
+@keyframes scrollText {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+
+/* Dark mode toggle */
+.dark-mode-toggle {
+    position: absolute;
+    right: 40px; /* Moved to the left */
+    cursor: pointer;
+    font-size: 1.5em;
+    color: #ff9800; /* Orange */
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode header {
+    background-color: rgba(18, 18, 18, 0.8);
+}
+
+body.dark-mode nav ul li a {
+    color: #e0e0e0;
+}
+
+body.dark-mode .dark-mode-toggle {
+    color: #e0e0e0;
+}
+
+body.dark-mode .service-card {
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+body.dark-mode .about,
+body.dark-mode .portfolio,
+body.dark-mode .testimonials,
+body.dark-mode .contact {
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+/* Carousel styles */
+#carousel .item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Hero section */
+#hero {
+    background: url('hero-image.jpg') no-repeat center center/cover;
+    color: black;
+    text-align: center;
+    padding: 100px 20px;
+    margin-top: 60px;
+}
+
+/* Services section */
+#services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 50px 20px;
+}
+
+.service-card {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.service-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 10px;
+    animation: move 2s infinite alternate;
+    transition: transform 0.3s;
+}
+
+.service-card:hover .service-image {
+    animation: vibrate 0.3s infinite;
+}
+
+@keyframes move {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+@keyframes vibrate {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-2px); }
+    50% { transform: translateX(2px); }
+    75% { transform: translateX(-2px); }
+}
+
+#graphic-design { background-color: #616161; color: white; }
+#branding { background-color: #f5c6a5; color: #333; }
+#digital-marketing { background-color: #ff9800; color: white; }
+#analysis-strategy { background-color: #81d4fa; color: #333; }
+#web-development { background-color: #4e342e; color: white; }
+
+/* General container styles */
+.container {
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin: 0 auto;
+    max-width: 800px; /* Limite la largeur du conteneur */
+    transition: background-color 0.3s, transform 0.3s, opacity 0.3s;
+    transform: translateY(50px);
+    opacity: 0;
+}
+
+.container:hover {
+    transform: scale(1.03);
+}
+
+.about { background-color: #616161; color: white; }
+.portfolio { background-color: #f5c6a5; color: #333; }
+.testimonials { background-color: #ff9800; color: white; }
+.contact { background-color: #81d4fa; color: #333; }
+
+.section-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    background-color: white;
+    color: #333;
+    display: inline-block;
+    padding: 0 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transform: translateY(-50%);
+    position: relative;
+}
+
+.align-left {
+    text-align: left;
+    left: 0;
+}
+
+.align-right {
+    text-align: right;
+    right: 0;
+}
+
+/* Footer styles */
+footer {
+    background-color: rgba(51, 51, 51, 0.8);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+.social-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+/* Button styles */
+button {
+    padding: 10px 20px;
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e68900;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dark-mode-toggle {
+        right: 20px; /* Adjust for better positioning on smaller screens */
+    }
+
+    #services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card {
+        width: 80%;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .align-left, .align-right {
+        text-align: center;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    text-align: center;
+    margin: 10px;
+    flex: 1 1 calc(33.333% - 20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.project-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 1em;
+}
+
+/* Specific styles for each project card */
+.project-card.graphic-design { background-color: #616161; color: white; }
+.project-card.branding { background-color: #f5c6a5; color: #333; }
+.project-card.digital-marketing { background-color: #ff9800; color: white; }
+.project-card.analysis-strategy { background-color: #81d4fa; color: #333; }
+.project-card.web-development { background-color: #4e342e; color: white; }
