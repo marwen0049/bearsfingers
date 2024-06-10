@@ -1,4 +1,3 @@
-<!-- Include the header -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -8,44 +7,34 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="pink-theme">
-    <!-- Include the header -->
-    <header>
-        <div class="logo">
-            <img src="logo.jpg" alt="Logo de Big Bears Marketing">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="index.html#services">Services</a></li>
-                <li><a href="index.html#about">À propos</a></li>
-                <li><a href="index.html#portfolio">Portfolio</a></li>
-                <li><a href="index.html#testimonials">Témoignages</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Include header -->
+    <div id="header-placeholder"></div>
 
-    <section class="project">
-        <img src="cover-pink.jpg" alt="Couverture" class="cover-image">
-        <img src="profile-pink.jpg" alt="Profile" class="profile-image">
-        <div class="description">
-            <h1>Pink Bears</h1>
-            <p>Description du projet Pink Bears.</p>
-        </div>
-        <div class="video">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-    </section>
+    <div class="cover-image">
+        <img src="cover-pink.jpg" alt="Cover Image">
+    </div>
 
-    <!-- Include the footer -->
-    <footer>
-        <p>&copy; 2024 Big Bears Marketing Agency. Tous droits réservés.</p>
-        <div class="social-links">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-        </div>
-    </footer>
+    <div class="profile-image">
+        <img src="profile-pink.jpg" alt="Profile Image">
+    </div>
+
+    <div class="description">
+        <h2>Pink Bears</h2>
+        <p>Description du projet Pink Bears.</p>
+    </div>
+
+    <div class="video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/video-id" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <!-- Include footer -->
+    <div id="footer-placeholder"></div>
+
+    <script>
+        $(document).ready(function(){
+            $("#header-placeholder").load("header.html");
+            $("#footer-placeholder").load("footer.html");
+        });
+    </script>
 </body>
 </html>
