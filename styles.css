@@ -1,6 +1,6 @@
 /* Base styles */
 body {
-    font-family: 'Varela Round';font-size: 22px;
+    font-family: 'Varela Round', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
