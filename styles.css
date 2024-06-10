@@ -10,7 +10,7 @@ body {
 header {
     display: flex;
     justify-content: center; /* Center the menu items */
-    align-items: center;
+    align-items: left;
     padding: 10px 20px;
     background-color: rgba(78, 52, 46, 0.8); /* Couleur #4E342E avec transparence */
     color: #333; /* Couleur du texte dans le header */
@@ -25,7 +25,6 @@ header .logo img {
     height: 40px;
     width: 80px;
     border-radius: 0%;
-    align-items: left;
 }
 
 nav {
@@ -112,7 +111,7 @@ body.dark-mode .contact {
 
 /* Hero section */
 #hero {
-    background: url('hero-image.jpg') no-repeat center center/cover;
+    background: url('logo.jpg') no-repeat center center/cover;
     color: black;
     text-align: center;
     padding: 100px 20px;
