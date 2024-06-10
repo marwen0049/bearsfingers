@@ -12,7 +12,7 @@ header {
     justify-content: center; /* Center the menu items */
     align-items: center;
     padding: 10px 20px;
-    background-color: rgba(78, 52, 46, 0.8); /* Couleur #4E342E avec transparence */
+    background-color: rgba(30, 31, 35, 0.8); /* Couleur #4E342E avec transparence */
     color: #333; /* Couleur du texte dans le header */
     position: fixed;
     width: 100%;
