@@ -25,6 +25,7 @@ header .logo img {
     height: 40px;
     width: 80px;
     border-radius: 0%;
+    align-items: left;
 }
 
 nav {
