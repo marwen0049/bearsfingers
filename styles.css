@@ -1,25 +1,27 @@
 /* Base styles */
-body {
-    font-family: 'Varela Round', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Header styles */
 header {
     display: flex;
     justify-content: center;
     align-items: left;
     padding: 10px 20px;
-    background-color: #F5C6A5; /* Solid color */
+    background-color: #9C9C9C; /* Solid color */
     color: #333;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
     transition: background-color 0.3s;
+    height: 60px; /* Assuming a fixed height */
 }
+
+/* Add top padding to body to offset header height */
+body {
+    font-family: 'Varela Round', sans-serif;
+    margin: 0;
+    padding: 60px 0 0 0; /* Padding top to offset header height */
+    box-sizing: border-box;
+}
+
 
 
 header .logo img {
