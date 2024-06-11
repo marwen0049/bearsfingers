@@ -9,17 +9,18 @@ body {
 /* Header styles */
 header {
     display: flex;
-    justify-content: center; /* Center the menu items */
+    justify-content: center;
     align-items: left;
     padding: 10px 20px;
-    background-color: #9C9C9C; /* This is solid color */
-    color: #333; /* Couleur du texte dans le header */
+    background-color: #9C9C9C; /* Solid color */
+    color: #333;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
     transition: background-color 0.3s;
 }
+
 
 header .logo img {
     height: 40px;
