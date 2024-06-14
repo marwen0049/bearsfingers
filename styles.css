@@ -14,14 +14,14 @@ header {
     justify-content: center;
     align-items: center; /* Center the items vertically */
     padding: 10px 20px;
-    background-color: #9C9C9C; /* Solid color */
+    background-color: #4E342E; /* Solid color */
     color: #333;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
     transition: background-color 0.3s;
-    height: 70px; /* Fixed height */
+    height: 50px; /* Fixed height */
 }
 
 /* Other existing styles */
@@ -305,8 +305,8 @@ button:hover {
 }
 
 .project-card img {
-    width: 100px;
-    height: 100px;
+    height: auto; /* Original height */
+    width: auto; /* Original width */
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 10px;
