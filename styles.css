@@ -1,5 +1,4 @@
 /* Base styles */
-/* Base styles */
 body {
     font-family: 'Varela Round', sans-serif;
     margin: 0;
@@ -8,7 +7,7 @@ body {
     padding-top: 70px; /* Adjust padding-top to match header height */
 }
 
-/* Header styles */ 
+/* Header styles */
 header {
     display: flex;
     justify-content: center;
@@ -26,9 +25,6 @@ header {
 
 /* Other existing styles */
 
-
-
-
 header .logo img {
     height: 40px;
     width: 80px;
@@ -37,335 +33,280 @@ header .logo img {
 
 nav {
     display: flex;
-    justify-content: center; /* Center the nav items */
-    gap: 20px;
-    padding-left: 20px; /* Add padding to move nav items to the left */
+    justify-content: center; /* Center align the nav items */
+    align-items: center;
+    flex-grow: 1;
+    text-align: center; /* Center align text within the nav items */
 }
 
 nav ul {
-    list-style: none;
     display: flex;
-    justify-content: center; /* Center the ul items */
-    gap: 20px;
+    list-style: none;
     margin: 0;
     padding: 0;
 }
 
+nav ul li {
+    margin: 0 10px;
+}
+
 nav ul li a {
-    color: #ff9800; /* Orange */
+    color: white;
     text-decoration: none;
-    padding: 10px 15px;
-    display: block;
-    transition: color 0.3s, transform 0.3s;
+    transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #e68900; /* Orange plus foncé */
-    animation: scrollText 0.3s ease-in-out;
+    color: #FF8C00;
 }
 
-@keyframes scrollText {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-5px); }
-    100% { transform: translateY(0); }
-}
-
-/* Dark mode toggle */
+/* Dark mode toggle styles */
 .dark-mode-toggle {
-    position: absolute;
-    right: 40px; /* Moved to the left */
     cursor: pointer;
-    font-size: 1.5em;
-    color: #ff9800; /* Orange */
+    color: white;
 }
 
-/* Dark mode styles */
-body.dark-mode {
-    background-color: #121212;
-    color: #e0e0e0;
+.dark-mode .dark-mode-toggle {
+    color: white;
 }
 
-body.dark-mode header {
-    background-color: rgba(18, 18, 18, 0.8);
-}
-
-body.dark-mode nav ul li a {
-    color: #e0e0e0;
-}
-
-body.dark-mode .dark-mode-toggle {
-    color: #e0e0e0;
-}
-
-body.dark-mode .service-card {
-    background-color: #333;
-    color: #e0e0e0;
-}
-
-body.dark-mode .about,
-body.dark-mode .portfolio,
-body.dark-mode .testimonials,
-body.dark-mode .contact {
-    background-color: #333;
-    color: #e0e0e0;
+/* Section styles */
+.section {
+    margin: 40px 0; /* Adds space between sections */
 }
 
 /* Carousel styles */
-#carousel .item img {
-    width: 100%;
-    height: auto;
-    display: block;
+.owl-carousel .item {
+    text-align: center;
+    height: 400px; /* Adjust the height as needed */
 }
 
-/* Hero section */
+.owl-carousel .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Hero section styles */
 #hero {
-    background: url('bb.png') no-repeat center center/cover;
-    color: black;
     text-align: center;
     padding: 100px 20px;
-    margin-top: 60px;
-}
-
-/* Services section */
-#services {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 50px 20px;
-}
-
-.service-card {
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-    text-align: center;
-    width: 30%;
-    margin-bottom: 20px;
-}
-
-.service-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-}
-
-.service-image {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    display: block;
-    margin: 0 auto 10px;
-    animation: move 2s infinite alternate;
-    transition: transform 0.3s;
-}
-
-.service-card:hover .service-image {
-    animation: vibrate 0.3s infinite;
-}
-
-@keyframes move {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-10px); }
-}
-
-@keyframes vibrate {
-    0%, 100% { transform: translateX(0); }
-    25% { transform: translateX(-2px); }
-    50% { transform: translateX(2px); }
-    75% { transform: translateX(-2px); }
-}
-
-#graphic-design { background-color: #616161; color: white; }
-#branding { background-color: #f5c6a5; color: #333; }
-#digital-marketing { background-color: #ff9800; color: white; }
-#analysis-strategy { background-color: #81d4fa; color: #333; }
-#web-development { background-color: #4e342e; color: white; }
-
-/* General container styles */
-.container {
-    padding: 50px 20px;
-    text-align: center;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    margin: 0 auto;
-    max-width: 800px; /* Limite la largeur du conteneur */
-    transition: background-color 0.3s, transform 0.3s, opacity 0.3s;
-    transform: translateY(50px);
-    opacity: 0;
-}
-
-.container:hover {
-    transform: scale(1.03);
-}
-
-.about { background-color: #616161; color: white; }
-.portfolio { background-color: #f5c6a5; color: #333; }
-.testimonials { background-color: #ff9800; color: white; }
-
-.section-title {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 1.5em;
-    background-color: white;
-    color: #333;
-    display: inline-block;
-    padding: 0 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transform: translateY(-50%);
-    position: relative;
-}
-
-.align-left {
-    text-align: left;
-    left: 0;
-}
-
-.align-right {
-    text-align: right;
-    right: 0;
-}
-
-
-/* Testimonials Section */
-.testimonials {
-    display: flex;
-    padding: 20px;
-    flex-direction: column;
-    gap: 20px; /* Space between testimonials */
-}
-
-.testimonial {
-    display: flex;
-    align-items: center; /* Align items vertically */
-    gap: 20px; /* Space between photo and text */
-    border: 1px solid #ddd; /* Optional: border for each testimonial */
-    padding: 10px; /* Optional: padding around each testimonial */
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Dynamic effect */
-}
-
-.testimonial:hover {
-    transform: translateY(-5px); /* Slight move up on hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect on hover */
-}
-
-.testimonial-photo {
-    width: 60px; /* Width of the photo */
-    height: 60px; /* Height of the photo */
-    border-radius: 50%; /* Make the photo circular */
-    object-fit: cover; /* Ensure the photo covers the area */
-}
-
-.testimonial-text {
-    flex: 1; /* Allow text to take remaining space */
-}
-
-.testimonial-text p {
-    margin: 0;
-    font-size: 1em;
-    color: #333;
-}
-
-.testimonial-text h4 {
-    margin: 5px 0 0 0;
-    font-size: 1.1em;
-    color: #666;
-}
-
-
-
-/* Footer styles */
-footer {
-    background-color: rgba(51, 51, 51, 0.8);
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
     color: white;
-    text-align: center;
-    padding: 20px;
-    position: relative;
 }
 
-.social-links a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
-}
-
-/* Button styles */
-button {
+#hero button {
     padding: 10px 20px;
-    background-color: #ff9800;
+    font-size: 1.2em;
+    background-color: #FF8C00;
     color: white;
     border: none;
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #e68900;
+#hero button:hover {
+    background-color: #FF4500;
 }
 
-/* Responsive styles */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column; /* Stack items vertically */
-    }
-
-    nav {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .dark-mode-toggle {
-        right: 20px; /* Adjust for better positioning on smaller screens */
-    }
-
-    #services {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .service-card {
-        width: 80%;
-    }
-
-    .container {
-        width: 90%;
-    }
-
-    .align-left, .align-right {
-        text-align: center;
-        left: 50%;
-        transform: translateX(-50%);
-    }
+/* Services section styles */
+#services {
+    text-align: center;
 }
 
-.gallery {
+.service-card {
+    display: inline-block;
+    width: 18%;
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-card img {
+    width: 100%;
+    height: auto;
+}
+
+.service-card h2 {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.service-card p {
+    color: #777;
+}
+
+/* About section styles */
+#about {
+    background-color: #f4f4f4;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#about .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#about h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Portfolio section styles */
+#portfolio {
+    background-color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#portfolio .container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#portfolio h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#portfolio .gallery {
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .project-card {
-    text-align: center;
-    margin: 10px;
-    flex: 1 1 calc(33.333% - 20px);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    border-radius: 10px;
+    width: 30%;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .project-card img {
-    height: auto; /* Original height */
-    width: auto; /* Original width */
-    border-radius: 0%;
-    object-fit: cover;
-    margin-bottom: 10px;
+    width: 100%;
+    height: auto;
 }
 
 .project-card p {
+    padding: 10px;
     font-size: 1em;
+    color: #333;
 }
 
-/* Specific styles for each project card */
-.project-card.graphic-design { background-color: #616161; color: white; }
-.project-card.branding { background-color: #f5c6a5; color: #333; }
-.project-card.digital-marketing { background-color: #ff9800; color: white; }
-.project-card.analysis-strategy { background-color: #81d4fa; color: #333; }
-.project-card.web-development { background-color: #4e342e; color: white; }
+/* Testimonials section styles */
+.testimonials {
+    background-color: #f4f4f4;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.testimonial {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.testimonial-photo {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+}
+
+.testimonial-text {
+    max-width: 600px;
+}
+
+.testimonial-text p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #777;
+}
+
+.testimonial-text h4 {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* Footer styles */
+footer {
+    background-color: #4E342E; /* Solid color */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer .social-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer .social-links a:hover {
+    color: #FF8C00;
+}
+
+/* Dark mode styles */
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode header {
+    background-color: #333;
+}
+
+.dark-mode nav ul li a {
+    color: white;
+}
+
+.dark-mode #hero {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('hero-bg.jpg');
+}
+
+.dark-mode #about {
+    background-color: #333;
+}
+
+.dark-mode #portfolio {
+    background-color: #222;
+}
+
+.dark-mode .service-card,
+.dark-mode .project-card {
+    background-color: #444;
+    color: white;
+}
+
+.dark-mode .service-card p,
+.dark-mode .project-card p,
+.dark-mode .testimonial-text p {
+    color: #ccc;
+}
+
+.dark-mode footer {
+    background-color: #222;
+}
