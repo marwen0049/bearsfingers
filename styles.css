@@ -229,6 +229,7 @@ body.dark-mode .contact {
 /* Testimonials Section */
 .testimonials {
     display: flex;
+    padding: 20px;
     flex-direction: column;
     gap: 20px; /* Space between testimonials */
 }
