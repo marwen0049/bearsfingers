@@ -1,17 +1,17 @@
 /* Base styles */
-/* Base styles */
 body {
     font-family: 'Varela Round', sans-serif;
+    font-weight: 900;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     padding-top: 70px; /* Adjust padding-top to match header height */
 }
 
-/* Header styles */
+/* Header styles */ 
 header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between; /* Space between logo and nav */
     align-items: center; /* Center the items vertically */
     padding: 10px 20px;
     background-color: #FFF; /* Solid color */
@@ -22,24 +22,6 @@ header {
     z-index: 1000;
     transition: background-color 0.3s;
     height: 50px; /* Fixed height */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow */
-}
-
-
-/* Header styles */
-header {
-    display: flex;
-    justify-content: space-between; /* Space between logo and nav */
-    align-items: left; /* Center the items vertically */
-    padding: 10px 20px;
-    background-color: #FFF; /* Solid color */
-    color: #333;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    transition: background-color 0.3s;
-    height: 45px; /* Fixed height */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow */
 }
 
@@ -97,7 +79,6 @@ nav ul li a:hover {
     50% { transform: translateY(-5px); }
     100% { transform: translateY(0); }
 }
-
 
 /* Dark mode toggle */
 .dark-mode-toggle {
