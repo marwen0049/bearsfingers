@@ -3,14 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Big Bears Marketing Agency</title>
-    <!-- Lien vers le fichier CSS -->
-    <link rel="stylesheet" href="styles.css">
-    <!-- Lien vers une librairie de carrousel (comme Owl Carousel) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
-    <!-- Lien vers les icônes de Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Big Bears Marketing</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 </head>
 <body>
     <header>
@@ -30,147 +28,135 @@
         <div class="dark-mode-toggle" id="dark-mode-toggle">
             <i class="fas fa-moon"></i>
         </div>
-    </header>
-
-    <section id="carousel">
-        <div class="owl-carousel owl-theme">
-            <div class="item"><img src="bb.png" alt="Slide 1"></div>
-            <div class="item"><img src="bb.png" alt="Slide 2"></div>
-            <div class="item"><img src="bb.png" alt="Slide 3"></div>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
         </div>
-    </section>
-
+    </header>
     <section id="hero">
-        <h1>Transformez votre entreprise avec Big Bears Marketing</h1>
-        <button>Découvrez nos services</button>
+        <h1>Big Bears Marketing</h1>
+        <p>Votre succès, notre mission</p>
     </section>
-
     <section id="services">
         <div class="service-card" id="graphic-design">
-            <img src="logo.png" alt="Graphic Design Image" class="service-image">
-            <h2>Graphic Design</h2>
-            <p>Logo design, Website design, UI design, etc.</p>
+            <img src="services/graphic_design.png" alt="Graphic Design" class="service-image">
+            <h2>Conception graphique</h2>
+            <p>Création de visuels percutants et attractifs.</p>
         </div>
         <div class="service-card" id="branding">
-            <img src="logo.png" alt="Branding Image" class="service-image">
+            <img src="services/branding.png" alt="Branding" class="service-image">
             <h2>Branding</h2>
-            <p>Brand identity development, Creation of brand guidelines, etc.</p>
+            <p>Développement d'une identité de marque forte.</p>
         </div>
         <div class="service-card" id="digital-marketing">
-            <img src="logo.png" alt="Digital Marketing Image" class="service-image">
-            <h2>Digital Marketing</h2>
-            <p>Social media management, Email marketing, SEO, etc.</p>
+            <img src="services/digital_marketing.png" alt="Digital Marketing" class="service-image">
+            <h2>Marketing digital</h2>
+            <p>Stratégies de marketing numérique innovantes.</p>
         </div>
         <div class="service-card" id="analysis-strategy">
-            <img src="logo.png" alt="Analysis and Strategy Image" class="service-image">
-            <h2>Analysis and Strategy</h2>
-            <p>Web performance analysis, Market research, etc.</p>
+            <img src="services/analysis_strategy.png" alt="Analysis & Strategy" class="service-image">
+            <h2>Analyse & stratégie</h2>
+            <p>Analyses approfondies et conseils stratégiques.</p>
         </div>
         <div class="service-card" id="web-development">
-            <img src="logo.png" alt="Web Development Image" class="service-image">
-            <h2>Web Development</h2>
-            <p>Responsive website development, E-commerce website development, etc.</p>
+            <img src="services/web_development.png" alt="Web Development" class="service-image">
+            <h2>Développement web</h2>
+            <p>Création de sites web performants et optimisés.</p>
         </div>
     </section>
-
-    <section id="about">
-        <div class="container about">
-            <h2>À propos de nous</h2>
-            <p>Nous sommes une agence de marketing passionnée par la transformation des entreprises.</p>
-        </div>
+    <section id="about" class="container about">
+        <div class="section-title">À propos de nous</div>
+        <p>Big Bears Marketing est une agence de marketing créative dédiée à aider les entreprises à atteindre leurs objectifs grâce à des stratégies de marketing innovantes et des solutions personnalisées. Notre équipe est composée de professionnels passionnés par le marketing et la créativité.</p>
     </section>
-
-    <section id="portfolio">
-        <div class="container portfolio">
-            <h2>Our Brain Team</h2>
-            <div class="gallery">
-                <div class="project-card graphic-design">
-                    <img src="logo.png" alt="Projet 1" class="project-image">
-                    <p>Pink Bears</p>
-                </div>
-                <div class="project-card branding">
-                    <img src="logo.png" alt="Projet 2" class="project-image">
-                    <p>Orange Bears</p>
-                </div>
-                <div class="project-card digital-marketing">
-                    <img src="logo.png" alt="Projet 3" class="project-image">
-                    <p>Blue Bears</p>
-                </div>
-                <div class="project-card analysis-strategy">
-                    <img src="logo.png" alt="Projet 4" class="project-image">
-                    <p>Black Bears</p>
-                </div>
-                <div class="project-card web-development">
-                    <img src="logo.png" alt="Projet 5" class="project-image">
-                    <p>Double Bears</p>
-                </div>
+    <section id="portfolio" class="container portfolio">
+        <div class="section-title align-right">Portfolio</div>
+        <div class="gallery">
+            <div class="project-card">
+                <img src="portfolio/project1.jpg" alt="Projet 1">
+                <p>Projet 1</p>
+            </div>
+            <div class="project-card">
+                <img src="portfolio/project2.jpg" alt="Projet 2">
+                <p>Projet 2</p>
+            </div>
+            <div class="project-card">
+                <img src="portfolio/project3.jpg" alt="Projet 3">
+                <p>Projet 3</p>
             </div>
         </div>
     </section>
-
-   <!-- Témoignages Section -->
-<section class="testimonials">
-    <div class="testimonial">
-        <img src="logo.jpg" alt="Person 1" class="testimonial-photo">
-        <div class="testimonial-text">
-            <p>"This is a testimonial from person 1."</p>
-            <h4>Person 1</h4>
+    <section id="testimonials" class="container testimonials">
+        <div class="section-title">Témoignages</div>
+        <div class="testimonial">
+            <img src="testimonials/testimonial1.jpg" alt="Client 1" class="testimonial-photo">
+            <div class="testimonial-text">
+                <p>"Big Bears Marketing a transformé notre présence en ligne. Leurs stratégies ont multiplié notre audience."</p>
+                <h4>- Client 1</h4>
+            </div>
         </div>
-    </div>
-    <div class="testimonial">
-        <h2>Our Custumer</h2>
-        <img src="logo.jpg" alt="Person 2" class="testimonial-photo">
-        <div class="testimonial-text">
-            <p>"This is a testimonial from person 2."</p>
-            <h4>Person 2</h4>
-        </div>
-    </div>
-    <!-- Add more testimonials as needed -->
-</section>
-
-
-    <section id="contact">
-        <div class="container contact">
-            <h2>Contactez-nous</h2>
-            <form>
-                <input type="text" placeholder="Votre nom">
-                <input type="email" placeholder="Votre email">
-                <textarea placeholder="Votre message"></textarea>
-                <button type="submit">Envoyer</button>
-            </form>
+        <div class="testimonial">
+            <img src="testimonials/testimonial2.jpg" alt="Client 2" class="testimonial-photo">
+            <div class="testimonial-text">
+                <p>"Une équipe professionnelle et créative qui a su répondre à nos besoins spécifiques."</p>
+                <h4>- Client 2</h4>
+            </div>
         </div>
     </section>
-
+    <section id="contact" class="container contact">
+        <div class="section-title align-left">Contactez-nous</div>
+        <p>Pour toute demande ou information, n'hésitez pas à nous contacter via le formulaire ci-dessous :</p>
+        <form>
+            <input type="text" placeholder="Votre nom" required>
+            <input type="email" placeholder="Votre email" required>
+            <textarea placeholder="Votre message" required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
     <footer>
-        <p>&copy; 2024 Big Bears Marketing Agency. Tous droits réservés.</p>
         <div class="social-links">
             <a href="#"><i class="fab fa-facebook-f"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
         </div>
+        <p>&copy; 2024 Big Bears Marketing. Tous droits réservés.</p>
     </footer>
-
-    <!-- Lien vers le fichier JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
     <script>
         $(document).ready(function() {
-            $('.owl-carousel').owlCarousel({
+            // Menu toggle
+            $('.menu-toggle').click(function() {
+                $('nav ul').toggleClass('show');
+            });
+
+            // Configuration du carrousel
+            $(".owl-carousel").owlCarousel({
                 items: 1,
                 loop: true,
-                nav: true,
-                dots: true,
                 autoplay: true,
-                autoplayTimeout: 3000,
+                autoplayTimeout: 4000,
                 autoplayHoverPause: true
             });
 
-            // Ajouter une animation fade-in pour les sections .container
+            // Animation des images de service
+            document.querySelectorAll('.service-card').forEach(card => {
+                card.addEventListener('mouseover', () => {
+                    const image = card.querySelector('.service-image');
+                    image.style.animation = 'vibrate 0.3s infinite';
+                });
+                card.addEventListener('mouseout', () => {
+                    const image = card.querySelector('.service-image');
+                    image.style.animation = 'move 2s infinite alternate';
+                });
+            });
+
+            // Animation des conteneurs au défilement
             $(window).on('scroll', function() {
                 $('.container').each(function() {
-                    if ($(this).offset().top < $(window).scrollTop() + $(window).height() - 100) {
+                    var containerTop = $(this).offset().top;
+                    var windowBottom = $(window).scrollTop() + $(window).height();
+                    if (windowBottom > containerTop + 100) {
                         $(this).css('transform', 'translateY(0)').css('opacity', '1');
+                    } else {
+                        $(this).css('transform', 'translateY(50px)').css('opacity', '0');
                     }
                 });
             });
