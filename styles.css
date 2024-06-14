@@ -30,7 +30,7 @@ header {
 header {
     display: flex;
     justify-content: space-between; /* Space between logo and nav */
-    align-items: center; /* Center the items vertically */
+    align-items: left; /* Center the items vertically */
     padding: 10px 20px;
     background-color: #FFF; /* Solid color */
     color: #333;
@@ -39,7 +39,7 @@ header {
     top: 0;
     z-index: 1000;
     transition: background-color 0.3s;
-    height: 50px; /* Fixed height */
+    height: 45px; /* Fixed height */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow */
 }
 
