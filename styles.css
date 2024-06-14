@@ -8,7 +8,7 @@ body {
     padding-top: 70px; /* Adjust padding-top to match header height */
 }
 
-/* Header styles */
+/* Header styles */ 
 header {
     display: flex;
     justify-content: center;
@@ -225,6 +225,51 @@ body.dark-mode .contact {
     text-align: right;
     right: 0;
 }
+
+/* Testimonials Section */
+.testimonials {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between testimonials */
+}
+
+.testimonial {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    gap: 20px; /* Space between photo and text */
+    border: 1px solid #ddd; /* Optional: border for each testimonial */
+    padding: 10px; /* Optional: padding around each testimonial */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Dynamic effect */
+}
+
+.testimonial:hover {
+    transform: translateY(-5px); /* Slight move up on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect on hover */
+}
+
+.testimonial-photo {
+    width: 60px; /* Width of the photo */
+    height: 60px; /* Height of the photo */
+    border-radius: 50%; /* Make the photo circular */
+    object-fit: cover; /* Ensure the photo covers the area */
+}
+
+.testimonial-text {
+    flex: 1; /* Allow text to take remaining space */
+}
+
+.testimonial-text p {
+    margin: 0;
+    font-size: 1em;
+    color: #333;
+}
+
+.testimonial-text h4 {
+    margin: 5px 0 0 0;
+    font-size: 1.1em;
+    color: #666;
+}
+
 
 /* Footer styles */
 footer {
