@@ -307,7 +307,7 @@ button:hover {
 .project-card img {
     height: auto; /* Original height */
     width: auto; /* Original width */
-    border-radius: 50%;
+    border-radius: 30%;
     object-fit: cover;
     margin-bottom: 10px;
 }
