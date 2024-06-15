@@ -236,6 +236,15 @@ body.dark-mode .contact {
     right: 0;
 }
 
+/* Center text utility */
+.center-text {
+    text-align: center;
+}
+
+/* Add spacing between sections */
+section {
+    margin-bottom: 5px;
+}
 
 /* Testimonials Section */
 .testimonials {
@@ -256,127 +265,32 @@ body.dark-mode .contact {
 
 .testimonial:hover {
     transform: translateY(-5px); /* Slight move up on hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect on hover */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 .testimonial-photo {
-    width: 60px; /* Width of the photo */
-    height: 60px; /* Height of the photo */
-    border-radius: 50%; /* Make the photo circular */
-    object-fit: cover; /* Ensure the photo covers the area */
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
 }
 
 .testimonial-text {
-    flex: 1; /* Allow text to take remaining space */
+    max-width: 600px;
 }
 
-.testimonial-text p {
-    margin: 0;
-    font-size: 1em;
-    color: #333;
-}
-
-.testimonial-text h4 {
-    margin: 5px 0 0 0;
-    font-size: 1.1em;
-    color: #666;
-}
-
-
-
-/* Footer styles */
 footer {
-    background-color: rgba(51, 51, 51, 0.8);
-    color: white;
     text-align: center;
     padding: 20px;
-    position: relative;
+    background-color: #333;
+    color: white;
 }
 
-.social-links a {
-    color: white;
+footer .social-links a {
     margin: 0 10px;
+    color: white;
     text-decoration: none;
 }
 
-/* Button styles */
-button {
-    padding: 10px 20px;
-    background-color: #ff9800;
-    color: white;
-    border: none;
-    cursor: pointer;
+footer .social-links a:hover {
+    color: #ff9800;
 }
-
-button:hover {
-    background-color: #e68900;
-}
-
-/* Responsive styles */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column; /* Stack items vertically */
-    }
-
-    nav {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .dark-mode-toggle {
-        right: 20px; /* Adjust for better positioning on smaller screens */
-    }
-
-    #services {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .service-card {
-        width: 80%;
-    }
-
-    .container {
-        width: 90%;
-    }
-
-    .align-left, .align-right {
-        text-align: center;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-}
-
-.gallery {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.project-card {
-    text-align: center;
-    margin: 10px;
-    flex: 1 1 calc(33.333% - 20px);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    border-radius: 10px;
-}
-
-.project-card img {
-    height: auto; /* Original height */
-    width: auto; /* Original width */
-    border-radius: 0%;
-    object-fit: cover;
-    margin-bottom: 10px;
-}
-
-.project-card p {
-    font-size: 1em;
-}
-
-/* Specific styles for each project card */
-.project-card.graphic-design { background-color: #616161; color: white; }
-.project-card.branding { background-color: #f5c6a5; color: #333; }
-.project-card.digital-marketing { background-color: #ff9800; color: white; }
-.project-card.analysis-strategy { background-color: #81d4fa; color: #333; }
-.project-card.web-development { background-color: #4e342e; color: white; }
