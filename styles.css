@@ -294,3 +294,39 @@ footer .social-links a {
 footer .social-links a:hover {
     color: #ff9800;
 }
+
+/* Portfolio section (Our Brain Team) */
+.portfolio .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.project-card {
+    width: 30%;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.project-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 10px;
+    animation: move 2s infinite alternate;
+    transition: transform 0.3s;
+}
+
+.project-card:hover .project-image {
+    animation: vibrate 0.3s infinite;
+}
