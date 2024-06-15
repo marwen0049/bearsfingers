@@ -310,6 +310,8 @@ footer .social-links a:hover {
     margin-bottom: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #f5c6a5; /* Previous color */
+    color: #333; /* Previous text color */
 }
 
 .project-card:hover {
