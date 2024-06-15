@@ -310,9 +310,16 @@ footer .social-links a:hover {
     margin-bottom: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
-    background-color: #f5c6a5; /* Previous color */
-    color: #333; /* Previous text color */
+    /* Assigning each card a different primary color */
+    background-color: var(--project-color, #f5c6a5);
+    color: #333;
 }
+
+.project-card:nth-child(1) { background-color: #ff9800; color: white; } /* Orange */
+.project-card:nth-child(2) { background-color: #616161; color: white; } /* Dark Gray */
+.project-card:nth-child(3) { background-color: #81d4fa; color: #333; } /* Light Blue */
+.project-card:nth-child(4) { background-color: #4e342e; color: white; } /* Dark Brown */
+.project-card:nth-child(5) { background-color: #f5c6a5; color: #333; } /* Light Pink */
 
 .project-card:hover {
     transform: scale(1.05);
@@ -325,10 +332,5 @@ footer .social-links a:hover {
     border-radius: 50%;
     display: block;
     margin: 0 auto 10px;
-    animation: move 2s infinite alternate;
     transition: transform 0.3s;
-}
-
-.project-card:hover .project-image {
-    animation: vibrate 0.3s infinite;
 }
