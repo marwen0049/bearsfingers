@@ -7,11 +7,15 @@ body {
     box-sizing: border-box;
     padding-top: 70px; /* Adjust padding-top to match header height */
 }
-/* Add 5px space between portfolio and testimonials sections */
+/* Add 10px space between portfolio and testimonials sections */
 #portfolio {
     margin-bottom: 20px;
 }
 
+/* Add 10px space between portfolio and about sections */
+#portfolio {
+    margin-bottom: 10px;
+}
 /* Header styles */ 
 header {
     display: flex;
