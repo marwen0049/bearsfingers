@@ -241,6 +241,9 @@ h1 {
 
 
 /* Testimonials Section */
+h2 {
+            text-align: center;
+        }
 .testimonials {
     display: flex;
     padding: 20px;
