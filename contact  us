@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="contact-page">
+        <h1>Contact Us</h1>
+        <div class="contact-container">
+            <div class="contact-card">
+                <div class="contact-icon" style="background-color: #81D4FA;">
+                    <img src="email-icon.png" alt="Email Icon">
+                </div>
+                <div class="contact-info">
+                    <h3>Email</h3>
+                    <p>example@example.com</p>
+                </div>
+            </div>
+            <div class="contact-card">
+                <div class="contact-icon" style="background-color: #4E342E;">
+                    <img src="phone-icon.png" alt="Phone Icon">
+                </div>
+                <div class="contact-info">
+                    <h3>Phone</h3>
+                    <p>+1234567890</p>
+                </div>
+            </div>
+            <div class="contact-card">
+                <div class="contact-icon" style="background-color: #FF9800;">
+                    <img src="address-icon.png" alt="Address Icon">
+                </div>
+                <div class="contact-info">
+                    <h3>Address</h3>
+                    <p>1234 Street Name, City, Country</p>
+                </div>
+            </div>
+            <div class="contact-card">
+                <div class="contact-icon" style="background-color: #F5C6A5;">
+                    <img src="whatsapp-icon.png" alt="WhatsApp Icon">
+                </div>
+                <div class="contact-info">
+                    <h3>WhatsApp</h3>
+                    <p>+1234567890</p>
+                </div>
+            </div>
+            <div class="contact-card">
+                <div class="contact-icon" style="background-color: #616161;">
+                    <img src="website-icon.png" alt="Website Icon">
+                </div>
+                <div class="contact-info">
+                    <h3>Website</h3>
+                    <p>www.example.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
