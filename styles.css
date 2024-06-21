@@ -138,6 +138,9 @@ body.dark-mode .contact {
 }
 
 /* Services section */
+h1 {
+            text-align: center;
+        }
 #services {
     display: flex;
     flex-wrap: wrap;
