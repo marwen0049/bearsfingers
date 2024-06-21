@@ -41,7 +41,7 @@ header .logo img {
 /* Navigation styles */
 nav {
     display: flex;
-    justify-content: center; /* Center the nav items */
+    justify-content: flex-start; /* Align the nav items to the left */
     gap: 20px;
     flex-grow: 1;
 }
@@ -49,7 +49,7 @@ nav {
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: center; /* Center the ul items */
+    justify-content: flex-start; /* Align the ul items to the left */
     gap: 20px;
     margin: 0;
     padding: 0;
@@ -424,3 +424,5 @@ button:hover {
 .project-card.digital-marketing { background-color: #ff9800; color: white; }
 .project-card.analysis-strategy { background-color: #81d4fa; color: #333; }
 .project-card.web-development { background-color: #4e342e; color: white; }
+
+The file is too long and its contents have been truncated.
