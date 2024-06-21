@@ -18,6 +18,11 @@ $(document).ready(function() {
             const image = card.querySelector('.service-image');
             image.style.animation = 'move 2s infinite alternate';
         });
+        // Ajouter un écouteur d'événement pour le clic
+        card.addEventListener('click', () => {
+            const id = card.id;
+            openModal(`modal-${id}`);
+        });
     });
 
     // Animation des conteneurs au défilement
@@ -33,3 +38,13 @@ $(document).ready(function() {
         });
     });
 });
+
+// Fonction pour ouvrir le modal
+function openModal(modalId) {
+    document.getElementById(modalId).style.display = "block";
+}
+
+// Fonction pour fermer le modal
+function closeModal(modalId) {
+    document.getElementById(modalId).style.display = "none";
+}
