@@ -7,13 +7,18 @@ body {
     box-sizing: border-box;
     padding-top: 70px; /* Adjust padding-top to match header height */
 }
-/* Add 10px space between portfolio and testimonials sections */
+/* Add 20px space between portfolio and testimonials sections */
 #portfolio {
     margin-bottom: 20px;
 }
 
 /* Add 10px space between portfolio and about sections */
 #portfolio {
+    margin-bottom: 20px;
+}
+
+/* Add 20px space between portfolio and partner sections */
+#partners {
     margin-bottom: 20px;
 }
 /* Header styles */ 
