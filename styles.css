@@ -340,7 +340,19 @@ h2 {
         transform: translateX(-100%);
     }
 }
+/* Dark mode styles for Partners section */
+body.dark-mode #partners {
+    background-color: rgba(18, 18, 18, 0.8); /* Darker transparent background */
+    color: #e0e0e0;
+}
 
+body.dark-mode #partners h2 {
+    color: #e0e0e0;
+}
+
+body.dark-mode .partner-logos img {
+    filter: brightness(0.8); /* Dim the logos slightly in dark mode */
+}
 
 
 
