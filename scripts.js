@@ -33,3 +33,55 @@ $(document).ready(function() {
         });
     });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const numberOfSnowflakes = 50; // Nombre de flocons de neige
+    const snowflakesContainer = document.getElementById('snowflakes-container');
+
+    for (let i = 0; i < numberOfSnowflakes; i++) {
+        const snowflake = document.createElement('div');
+        snowflake.classList.add('snowflake');
+        
+        // Taille aléatoire pour les flocons de neige
+        const size = Math.random() * 5 + 5 + 'px';
+        snowflake.style.width = size;
+        snowflake.style.height = size;
+
+        // Position horizontale aléatoire
+        snowflake.style.left = Math.random() * 100 + 'vw';
+
+        // Durée aléatoire pour l'animation de chute
+        const fallDuration = Math.random() * 5 + 5 + 's';
+        snowflake.style.animationDuration = fallDuration;
+
+        // Délai aléatoire pour l'animation de chute
+        const fallDelay = Math.random() * 5 + 's';
+        snowflake.style.animationDelay = fallDelay;
+
+        snowflakesContainer.appendChild(snowflake);
+    }
+
+    // Recréez les flocons de neige lors du redimensionnement de la fenêtre
+    window.addEventListener('resize', function() {
+        snowflakesContainer.innerHTML = '';
+        for (let i = 0; i < numberOfSnowflakes; i++) {
+            const snowflake = document.createElement('div');
+            snowflake.classList.add('snowflake');
+
+            const size = Math.random() * 5 + 5 + 'px';
+            snowflake.style.width = size;
+            snowflake.style.height = size;
+
+            snowflake.style.left = Math.random() * 100 + 'vw';
+
+            const fallDuration = Math.random() * 5 + 5 + 's';
+            snowflake.style.animationDuration = fallDuration;
+
+            const fallDelay = Math.random() * 5 + 's';
+            snowflake.style.animationDelay = fallDelay;
+
+            snowflakesContainer.appendChild(snowflake);
+        }
+    });
+});
+
