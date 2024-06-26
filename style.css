@@ -109,3 +109,6 @@ body.dark-mode .contact-info p a {
 body.dark-mode .contact-info p a:hover {
     color: #bb86fc;
 }
+.justified-text {
+    text-align: justify;
+}
