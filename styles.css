@@ -441,3 +441,6 @@ button:hover {
 .project-card.analysis-strategy { background-color: #81d4fa; color: #333; }
 .project-card.web-development { background-color: #4e342e; color: white; }
 
+.justified-text {
+    text-align: justify;
+}
