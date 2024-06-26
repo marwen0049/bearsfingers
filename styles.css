@@ -7,7 +7,7 @@ body {
     box-sizing: border-box;
     padding-top: 70px; /* Adjust padding-top to match header height */
 }
-/* Add 20px space between portfolio and testimonials sections */
+/* Add 10px space between portfolio and testimonials sections */
 #portfolio {
     margin-bottom: 20px;
 }
@@ -16,7 +16,6 @@ body {
 #portfolio {
     margin-bottom: 20px;
 }
-
 /* Header styles */ 
 header {
     display: flex;
@@ -130,6 +129,21 @@ body.dark-mode .contact {
     color: #e0e0e0;
 }
 
+/* Dark mode styles for Partners section */
+body.dark-mode #partners {
+    background-color: rgba(18, 18, 18, 0.8); /* Darker transparent background */
+    color: #e0e0e0;
+    margin-top: 20px; /* Add 20px spacing above the section */
+}
+
+body.dark-mode #partners h2 {
+    color: #e0e0e0;
+}
+
+body.dark-mode .partner-logos img {
+    filter: brightness(0.8); /* Dim the logos slightly in dark mode */
+}
+
 /* Carousel styles */
 #carousel .item img {
     width: 100%;
@@ -223,7 +237,6 @@ h1 {
     max-width: 600px; /* Limit paragraph width */
 }
 
-
 .container:hover {
     transform: scale(1.03);
 }
@@ -254,7 +267,6 @@ h1 {
     text-align: right;
     right: 0;
 }
-
 
 /* Testimonials Section */
 h2 {
@@ -312,7 +324,6 @@ h2 {
     margin-top: 20px; /* Add 20px spacing above the section */
 }
 
-
 #partners h2 {
     margin-bottom: 30px;
     font-size: 1.8em;
@@ -342,21 +353,6 @@ h2 {
         transform: translateX(-100%);
     }
 }
-/* Dark mode styles for Partners section */
-body.dark-mode #partners {
-    background-color: rgba(18, 18, 18, 0.8); /* Darker transparent background */
-    color: #e0e0e0;
-}
-
-body.dark-mode #partners h2 {
-    color: #e0e0e0;
-}
-
-body.dark-mode .partner-logos img {
-    filter: brightness(0.8); /* Dim the logos slightly in dark mode */
-}
-
-
 
 /* Footer styles */
 footer {
