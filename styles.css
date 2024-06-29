@@ -480,3 +480,37 @@ button:hover {
         transform: translateY(100vh);
     }
 }
+
+/* Hide the mobile menu by default */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Hide off-screen */
+    width: 250px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    padding: 1em;
+}
+
+/* Show the hamburger menu icon on small screens */
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: block;
+    }
+    .desktop-menu {
+        display: none;
+    }
+}
+
+/* When the menu is open, position it on-screen */
+.mobile-menu.open {
+    left: 0;
+}
