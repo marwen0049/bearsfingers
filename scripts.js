@@ -89,3 +89,19 @@ $(document).ready(function() {
         }
     });
 });
+
+
+$(document).ready(function() {
+    // Toggle mobile menu
+    $('#hamburger-menu').click(function() {
+        $('#mobile-menu').toggleClass('show');
+        $(this).find('i').toggleClass('fa-bars fa-times');
+    });
+
+    // Hide mobile menu when a link is clicked
+    $('#mobile-menu a').click(function() {
+        $('#mobile-menu').removeClass('show');
+        $('#hamburger-menu').find('i').removeClass('fa-times').addClass('fa-bars');
+    });
+});
+
