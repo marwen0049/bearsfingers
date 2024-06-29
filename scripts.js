@@ -32,9 +32,14 @@ $(document).ready(function() {
             }
         });
     });
-});
 
-document.addEventListener("DOMContentLoaded", function() {
+    // Handle hamburger menu
+    $('#hamburger-menu').click(function() {
+        $('#mobile-menu').toggleClass('active');
+        $('#hamburger-menu i').toggleClass('fa-bars fa-times');
+    });
+
+    // Handle snowflakes
     const numberOfSnowflakes = 50; // Nombre de flocons de neige
     const snowflakesContainer = document.getElementById('snowflakes-container');
 
@@ -84,4 +89,3 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
-
