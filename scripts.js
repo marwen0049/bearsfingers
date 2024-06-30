@@ -1,107 +1,33 @@
 $(document).ready(function() {
-    // Configuration du carrousel
+    // Initialize Owl Carousel
     $(".owl-carousel").owlCarousel({
         items: 1,
         loop: true,
+        nav: true,
         autoplay: true,
-        autoplayTimeout: 4000, // Changer de slide toutes les 4 secondes
+        autoplayTimeout: 5000,
         autoplayHoverPause: true
     });
 
-    // Animation des images de service
-    document.querySelectorAll('.service-card').forEach(card => {
-        card.addEventListener('mouseover', () => {
-            const image = card.querySelector('.service-image');
-            image.style.animation = 'vibrate 0.3s infinite';
-        });
-        card.addEventListener('mouseout', () => {
-            const image = card.querySelector('.service-image');
-            image.style.animation = 'move 2s infinite alternate';
-        });
+    // Dark Mode Toggle
+    $("#dark-mode-toggle").click(function() {
+        $("body").toggleClass("dark-mode");
+        $(this).find("i").toggleClass("fa-moon fa-sun");
     });
 
-    // Animation des conteneurs au défilement
-    $(window).on('scroll', function() {
-        $('.container').each(function() {
-            var containerTop = $(this).offset().top;
-            var windowBottom = $(window).scrollTop() + $(window).height();
-            if (windowBottom > containerTop + 100) {
-                $(this).css('transform', 'translateY(0)').css('opacity', '1');
-            } else {
-                $(this).css('transform', 'translateY(50px)').css('opacity', '0');
-            }
-        });
+    // Hamburger Menu Toggle
+    $("#hamburger-menu").click(function() {
+        $("nav ul.main-menu").slideToggle();
     });
 
-    // Handle hamburger menu
-    $('#hamburger-menu').click(function() {
-        $('#mobile-menu').toggleClass('active');
-        $('#hamburger-menu i').toggleClass('fa-bars fa-times');
-    });
-
-    // Handle snowflakes
-    const numberOfSnowflakes = 50; // Nombre de flocons de neige
-    const snowflakesContainer = document.getElementById('snowflakes-container');
-
-    for (let i = 0; i < numberOfSnowflakes; i++) {
-        const snowflake = document.createElement('div');
-        snowflake.classList.add('snowflake');
-        
-        // Taille aléatoire pour les flocons de neige
-        const size = Math.random() * 5 + 5 + 'px';
-        snowflake.style.width = size;
-        snowflake.style.height = size;
-
-        // Position horizontale aléatoire
-        snowflake.style.left = Math.random() * 100 + 'vw';
-
-        // Durée aléatoire pour l'animation de chute
-        const fallDuration = Math.random() * 5 + 5 + 's';
-        snowflake.style.animationDuration = fallDuration;
-
-        // Délai aléatoire pour l'animation de chute
-        const fallDelay = Math.random() * 5 + 's';
-        snowflake.style.animationDelay = fallDelay;
-
-        snowflakesContainer.appendChild(snowflake);
-    }
-
-    // Recréez les flocons de neige lors du redimensionnement de la fenêtre
-    window.addEventListener('resize', function() {
-        snowflakesContainer.innerHTML = '';
-        for (let i = 0; i < numberOfSnowflakes; i++) {
-            const snowflake = document.createElement('div');
-            snowflake.classList.add('snowflake');
-
-            const size = Math.random() * 5 + 5 + 'px';
-            snowflake.style.width = size;
-            snowflake.style.height = size;
-
-            snowflake.style.left = Math.random() * 100 + 'vw';
-
-            const fallDuration = Math.random() * 5 + 5 + 's';
-            snowflake.style.animationDuration = fallDuration;
-
-            const fallDelay = Math.random() * 5 + 's';
-            snowflake.style.animationDelay = fallDelay;
-
-            snowflakesContainer.appendChild(snowflake);
-        }
+    // Initialize Snowfall Effect
+    $(document).snowfall({
+        flakeCount: 100,        // Number of snowflakes
+        flakeColor: '#FFFFFF',  // Color of snowflakes
+        flakeIndex: 999999,     // z-index for snowflakes
+        minSize: 1,             // Minimum size of snowflakes
+        maxSize: 3,             // Maximum size of snowflakes
+        minSpeed: 1,            // Minimum speed of snowflakes
+        maxSpeed: 3             // Maximum speed of snowflakes
     });
 });
-
-
-$(document).ready(function() {
-    // Toggle mobile menu
-    $('#hamburger-menu').click(function() {
-        $('#mobile-menu').toggleClass('show');
-        $(this).find('i').toggleClass('fa-bars fa-times');
-    });
-
-    // Hide mobile menu when a link is clicked
-    $('#mobile-menu a').click(function() {
-        $('#mobile-menu').removeClass('show');
-        $('#hamburger-menu').find('i').removeClass('fa-times').addClass('fa-bars');
-    });
-});
-
