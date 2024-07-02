@@ -14,8 +14,8 @@
     <div class="contact-page">
         <h1>Contact us</h1>
         <p class="contact-paragraph justified-text">
-    At Big Bears Marketing Agency, we value every opportunity to connect with our clients and partners. Whether you have a question about our services, need assistance with a project, or simply want to learn more about what we do, we are here to help. Our dedicated team of professionals is committed to providing you with the best possible support and ensuring your experience with us is exceptional. We believe in creating strong, lasting relationships built on trust and collaboration. Your success is our success, and we are excited to work with you to achieve your marketing goals. Don't hesitate to reach out via email, phone, or visit us in person. We're looking forward to hearing from you and helping you navigate the dynamic world of marketing with confidence and creativity. Together, let's create something extraordinary.
-</p>
+            At Big Bears Marketing Agency, we value every opportunity to connect with our clients and partners. Whether you have a question about our services, need assistance with a project, or simply want to learn more about what we do, we are here to help. Our dedicated team of professionals is committed to providing you with the best possible support and ensuring your experience with us is exceptional. We believe in creating strong, lasting relationships built on trust and collaboration. Your success is our success, and we are excited to work with you to achieve your marketing goals. Don't hesitate to reach out via email, phone, or visit us in person. We're looking forward to hearing from you and helping you navigate the dynamic world of marketing with confidence and creativity. Together, let's create something extraordinary.
+        </p>
 
         <div class="contact-container">
             <div class="contact-card">
@@ -73,7 +73,25 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         $(document).ready(function() {
-            $('#header-container').load('header.html');
+            $('#header-container').load('header.html', function() {
+                // Ajouter le bouton de basculement du mode sombre après le chargement du header
+                $('#header-container').append('<button id="dark-mode-toggle"><i class="fas fa-moon"></i></button>');
+                
+                // Appliquer la préférence du mode sombre si elle existe
+                if (localStorage.getItem('dark-mode') === 'enabled') {
+                    $('body').addClass('dark-mode');
+                }
+
+                // Ajouter un gestionnaire d'événements pour basculer le mode sombre
+                $('#dark-mode-toggle').click(function() {
+                    $('body').toggleClass('dark-mode');
+                    if ($('body').hasClass('dark-mode')) {
+                        localStorage.setItem('dark-mode', 'enabled');
+                    } else {
+                        localStorage.removeItem('dark-mode');
+                    }
+                });
+            });
             $('#footer-container').load('footer.html');
         });
     </script>
