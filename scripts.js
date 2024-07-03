@@ -85,12 +85,5 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
- <!-- Chargement des scripts JavaScript nécessaires -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('#header-container').load('header.html');
-            $('#footer-container').load('footer.html');
-        });
-    </script>
+
 
