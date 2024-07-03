@@ -151,15 +151,17 @@
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2024 Big Bears Marketing Agency. All rights reserved.</p>
-        <div class="social-links">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-        </div>
-    </footer>
+   <!-- Inclusion du footer depuis footer.html -->
+    <div id="footer-container"></div>
+
+    <!-- Chargement des scripts JavaScript nécessaires -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#header-container').load('header.html');
+            $('#footer-container').load('footer.html');
+        });
+    </script>
 
     <!-- Link to JavaScript file -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
