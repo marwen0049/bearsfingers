@@ -84,6 +84,24 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+document.addEventListener("DOMContentLoaded", function() {
+    const toggle = document.getElementById('dark-mode-toggle');
+    const currentMode = localStorage.getItem('dark-mode');
+    
+    if (currentMode === 'enabled') {
+        document.body.classList.add('dark-mode');
+        toggle.querySelector('i').classList.remove('fa-moon');
+        toggle.querySelector('i').classList.add('fa-sun');
+    }
+
+    toggle.addEventListener('click', function() {
+        document.body.classList.toggle('dark-mode');
+        const isEnabled = document.body.classList.contains('dark-mode');
+        localStorage.setItem('dark-mode', isEnabled ? 'enabled' : 'disabled');
+        toggle.querySelector('i').classList.toggle('fa-moon');
+        toggle.querySelector('i').classList.toggle('fa-sun');
+    });
+});
 
 
 
