@@ -531,9 +531,13 @@ button:hover {
 }
 
 /* Classes pour afficher/masquer le menu mobile */
-.mobile-menu.open {
-    left: 0;
-    display: block;
+.mobile-menu {
+    display: none; /* Masqué par défaut */
 }
+
+.mobile-menu.open {
+    display: block; /* Affiché lorsque 'open' est ajouté */
+}
+
 
 
