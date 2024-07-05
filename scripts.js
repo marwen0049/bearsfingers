@@ -1,107 +1,85 @@
 $(document).ready(function() {
-    // Configuration du carrousel
     $(".owl-carousel").owlCarousel({
         items: 1,
         loop: true,
         autoplay: true,
-        autoplayTimeout: 4000, // Changer de slide toutes les 4 secondes
-        autoplayHoverPause: true
+        autoplayTimeout: 3000, // Change the duration of each slide (in milliseconds)
+        nav: false,
+        dots: true
     });
 
-    // Animation des images de service
-    document.querySelectorAll('.service-card').forEach(card => {
-        card.addEventListener('mouseover', () => {
-            const image = card.querySelector('.service-image');
-            image.style.animation = 'vibrate 0.3s infinite';
-        });
-        card.addEventListener('mouseout', () => {
-            const image = card.querySelector('.service-image');
-            image.style.animation = 'move 2s infinite alternate';
-        });
-    });
+    // Animation au survol des cartes de service
+    $('.service-card').hover(
+        function() {
+            $(this).addClass('animate__animated animate__pulse');
+        },
+        function() {
+            $(this).removeClass('animate__animated animate__pulse');
+        }
+    );
 
     // Animation des conteneurs au défilement
-    $(window).on('scroll', function() {
+    $(window).scroll(function() {
         $('.container').each(function() {
-            var containerTop = $(this).offset().top;
-            var windowBottom = $(window).scrollTop() + $(window).height();
-            if (windowBottom > containerTop + 100) {
-                $(this).css('transform', 'translateY(0)').css('opacity', '1');
-            } else {
-                $(this).css('transform', 'translateY(50px)').css('opacity', '0');
+            if ($(window).scrollTop() + $(window).height() > $(this).offset().top) {
+                $(this).addClass('animate__animated animate__fadeInUp');
             }
         });
     });
-});
 
-document.addEventListener("DOMContentLoaded", function() {
-    const numberOfSnowflakes = 50; // Nombre de flocons de neige
-    const snowflakesContainer = document.getElementById('snowflakes-container');
+    // Animation de neige en arrière-plan
+    const canvas = document.createElement('canvas');
+    document.body.appendChild(canvas);
+    const ctx = canvas.getContext('2d');
 
-    for (let i = 0; i < numberOfSnowflakes; i++) {
-        const snowflake = document.createElement('div');
-        snowflake.classList.add('snowflake');
-        
-        // Taille aléatoire pour les flocons de neige
-        const size = Math.random() * 5 + 5 + 'px';
-        snowflake.style.width = size;
-        snowflake.style.height = size;
-
-        // Position horizontale aléatoire
-        snowflake.style.left = Math.random() * 100 + 'vw';
-
-        // Durée aléatoire pour l'animation de chute
-        const fallDuration = Math.random() * 5 + 5 + 's';
-        snowflake.style.animationDuration = fallDuration;
-
-        // Délai aléatoire pour l'animation de chute
-        const fallDelay = Math.random() * 5 + 's';
-        snowflake.style.animationDelay = fallDelay;
-
-        snowflakesContainer.appendChild(snowflake);
+    let width, height;
+    function resize() {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
     }
+    window.addEventListener('resize', resize);
+    resize();
 
-    // Recréez les flocons de neige lors du redimensionnement de la fenêtre
-    window.addEventListener('resize', function() {
-        snowflakesContainer.innerHTML = '';
-        for (let i = 0; i < numberOfSnowflakes; i++) {
-            const snowflake = document.createElement('div');
-            snowflake.classList.add('snowflake');
-
-            const size = Math.random() * 5 + 5 + 'px';
-            snowflake.style.width = size;
-            snowflake.style.height = size;
-
-            snowflake.style.left = Math.random() * 100 + 'vw';
-
-            const fallDuration = Math.random() * 5 + 5 + 's';
-            snowflake.style.animationDuration = fallDuration;
-
-            const fallDelay = Math.random() * 5 + 's';
-            snowflake.style.animationDelay = fallDelay;
-
-            snowflakesContainer.appendChild(snowflake);
+    const snowflakes = [];
+    function createSnowflakes() {
+        const amount = Math.floor(width / 10);
+        for (let i = 0; i < amount; i++) {
+            snowflakes.push({
+                x: Math.random() * width,
+                y: Math.random() * height,
+                opacity: Math.random(),
+                speedX: Math.random() * 5,
+                speedY: Math.random() * 3 + 2,
+                radius: Math.random() * 4 + 1
+            });
         }
-    });
-});
-document.addEventListener("DOMContentLoaded", function() {
-    const toggle = document.getElementById('dark-mode-toggle');
-    const currentMode = localStorage.getItem('dark-mode');
-    
-    if (currentMode === 'enabled') {
-        document.body.classList.add('dark-mode');
-        toggle.querySelector('i').classList.remove('fa-moon');
-        toggle.querySelector('i').classList.add('fa-sun');
+    }
+    createSnowflakes();
+
+    function updateSnowflakes() {
+        for (let flake of snowflakes) {
+            flake.x += flake.speedX;
+            flake.y += flake.speedY;
+
+            if (flake.x > width) flake.x = 0;
+            if (flake.y > height) flake.y = 0;
+        }
     }
 
-    toggle.addEventListener('click', function() {
-        document.body.classList.toggle('dark-mode');
-        const isEnabled = document.body.classList.contains('dark-mode');
-        localStorage.setItem('dark-mode', isEnabled ? 'enabled' : 'disabled');
-        toggle.querySelector('i').classList.toggle('fa-moon');
-        toggle.querySelector('i').classList.toggle('fa-sun');
-    });
+    function drawSnowflakes() {
+        ctx.clearRect(0, 0, width, height);
+        for (let flake of snowflakes) {
+            ctx.beginPath();
+            ctx.arc(flake.x, flake.y, flake.radius, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(255, 255, 255, ${flake.opacity})`;
+            ctx.fill();
+        }
+    }
+
+    function animate() {
+        updateSnowflakes();
+        drawSnowflakes();
+        requestAnimationFrame(animate);
+    }
+    animate();
 });
-
-
-
