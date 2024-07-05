@@ -104,4 +104,15 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+$(document).ready(function() {
+    $('#menu-toggle').click(function() {
+        $('#mobile-menu').toggleClass('show');
+    });
+
+    // Toggle dark mode
+    $('#dark-mode-toggle').click(function() {
+        $('body').toggleClass('dark-mode');
+        $(this).find('i').toggleClass('fa-moon fa-sun');
+    });
+});
 
