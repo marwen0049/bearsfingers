@@ -84,6 +84,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
 document.addEventListener("DOMContentLoaded", function() {
     const toggle = document.getElementById('dark-mode-toggle');
     const currentMode = localStorage.getItem('dark-mode');
@@ -103,15 +104,11 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-
-
-
-
 document.addEventListener('DOMContentLoaded', function() {
-    console.log("DOM entièrement chargé");
-    
     const hamburgerMenu = document.getElementById('hamburger-menu');
     const mobileMenu = document.getElementById('mobile-menu');
+
+    console.log("DOM entièrement chargé");
 
     if (hamburgerMenu) {
         console.log("Bouton hamburger trouvé");
@@ -124,4 +121,3 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log("Bouton hamburger non trouvé");
     }
 });
-
