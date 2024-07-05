@@ -480,3 +480,56 @@ button:hover {
         transform: translateY(100vh);
     }
 }
+
+
+/* Styles pour le menu mobile et le bouton hamburger */
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    margin-right: 20px;
+}
+
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 250px;
+    height: 100%;
+    background-color: rgba(255, 152, 0, 0.9);
+    transition: left 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.mobile-menu ul {
+    list-style: none;
+    padding: 20px;
+}
+
+.mobile-menu ul li {
+    margin: 20px 0;
+}
+
+.mobile-menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+/* Styles pour masquer le menu sur les appareils de bureau */
+@media (max-width: 768px) {
+    .desktop-menu {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+}
+
+/* Classes pour afficher/masquer le menu mobile */
+.mobile-menu.open {
+    left: 0;
+}
+
