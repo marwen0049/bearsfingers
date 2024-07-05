@@ -35,6 +35,23 @@
             <i class="fas fa-moon"></i>
         </div>
     </header>
-    <script src="scripts.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log("DOM entièrement chargé");
+            const hamburgerMenu = document.getElementById('hamburger-menu');
+            const mobileMenu = document.getElementById('mobile-menu');
+        
+            if (hamburgerMenu) {
+                console.log("Bouton hamburger trouvé");
+        
+                hamburgerMenu.addEventListener('click', function() {
+                    console.log("Bouton hamburger cliqué");
+                    mobileMenu.classList.toggle('open');
+                });
+            } else {
+                console.log("Bouton hamburger non trouvé");
+            }
+        });
+    </script>
 </body>
 </html>
