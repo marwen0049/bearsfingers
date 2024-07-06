@@ -525,6 +525,7 @@ nav ul li a {
     margin: 4px 0;
 }
 
+/* Style pour le menu mobile */
 .nav-mobile {
     display: none;
     position: fixed;
@@ -562,7 +563,7 @@ nav ul li a {
     left: 0;
 }
 
-/* Cacher le menu normal sur les petits écrans */
+/* Cacher le menu normal et afficher le menu hamburger sur les petits écrans */
 @media (max-width: 768px) {
     nav {
         display: none;
@@ -571,7 +572,12 @@ nav ul li a {
     .hamburger {
         display: flex;
     }
+
+    .nav-mobile {
+        display: block;
+    }
 }
+
 
 
 
