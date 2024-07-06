@@ -482,61 +482,95 @@ button:hover {
 }
 
 
-/* Styles pour le menu mobile et le bouton hamburger */
-.hamburger-menu {
-    display: none;
-    cursor: pointer;
-    font-size: 24px;
-    margin-right: 20px;
-    color: #000; /* Pour une meilleure visibilité */
+/* Style pour le header et le menu */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
 }
 
-.mobile-menu {
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.dark-mode-toggle {
+    cursor: pointer;
+}
+
+/* Style pour le menu hamburger */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    margin: 4px 0;
+}
+
+.nav-mobile {
     display: none;
     position: fixed;
     top: 0;
     left: -100%;
     width: 250px;
     height: 100%;
-    background-color: rgba(255, 152, 0, 0.9);
-    transition: left 0.3s ease-in-out;
-    z-index: 1000;
-    color: white; /* Pour une meilleure visibilité */
+    background-color: rgba(255, 152, 0, 0.8);
+    transition: left 0.3s;
+    padding-top: 60px;
+    z-index: 1;
 }
 
-.mobile-menu ul {
+.nav-mobile ul {
+    display: flex;
+    flex-direction: column;
     list-style: none;
-    padding: 20px;
+    padding: 0;
 }
 
-.mobile-menu ul li {
-    margin: 20px 0;
+.nav-mobile ul li {
+    margin: 10px 0;
 }
 
-.mobile-menu ul li a {
+.nav-mobile ul li a {
     text-decoration: none;
-    color: white;
-    font-size: 18px;
+    color: #fff;
+    font-size: 20px;
+    padding: 10px;
+    display: block;
 }
 
-/* Styles pour masquer le menu sur les appareils de bureau */
+/* Activer le menu mobile */
+.nav-mobile.open {
+    left: 0;
+}
+
+/* Cacher le menu normal sur les petits écrans */
 @media (max-width: 768px) {
-    .desktop-menu {
+    nav {
         display: none;
     }
 
-    .hamburger-menu {
-        display: block;
+    .hamburger {
+        display: flex;
     }
-}
-
-/* Classes pour afficher/masquer le menu mobile */
-.mobile-menu {
-    display: none; /* Masqué par défaut */
-}
-
-.mobile-menu.open {
-    display: block; /* Affiché lorsque 'open' est ajouté */
 }
 
 
