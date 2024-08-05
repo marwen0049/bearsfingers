@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Inclusion du header depuis header.html -->
+    <div id="header-container"></div>
+
+    <div class="contact-page">
+        <h1>Contact us</h1>
+        <p class="contact-paragraph justified-text">
+    At Big Bears Marketing Agency, we value every opportunity to connect with our clients and partners. Whether you have a question about our services, need assistance with a project, or simply want to learn more about what we do, we are here to help. Our dedicated team of professionals is committed to providing you with the best possible support and ensuring your experience with us is exceptional. We believe in creating strong, lasting relationships built on trust and collaboration. Your success is our success, and we are excited to work with you to achieve your marketing goals. Don't hesitate to reach out via email, phone, or visit us in person. We're looking forward to hearing from you and helping you navigate the dynamic world of marketing with confidence and creativity. Together, let's create something extraordinary.
+</p>
+
+        <div class="contact-container">
+            <div class="contact-card">
+                <div class="contact-icon" style="background-color: #81D4FA;">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contact-info">
+                    <h3>Email</h3>
+                    <p><a href="mailto:example@example.com">example@example.com</a></p>
+                </div>
+            </div>
+            <div class="contact-card">
+                <div class="contact-icon" style="background-color: #4E342E;">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <div class="contact-info">
+                    <h3>Phone</h3>
+                    <p><a href="tel:+1234567890">+1234567890</a></p>
+                </div>
+            </div>
+            <div class="contact-card">
+                <div class="contact-icon" style="background-color: #FF9800;">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="contact-info">
+                    <h3>Address</h3>
+                    <p><a href="https://www.google.com/maps?q=1234+Street+Name,+City,+Country" target="_blank">1234 Street Name, City, Country</a></p>
+                </div>
+            </div>
+            <div class="contact-card">
+                <div class="contact-icon" style="background-color: #F5C6A5;">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+                <div class="contact-info">
+                    <h3>WhatsApp</h3>
+                    <p><a href="https://wa.me/1234567890" target="_blank">+1234567890</a></p>
+                </div>
+            </div>
+            <div class="contact-card">
+                <div class="contact-icon" style="background-color: #616161;">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <div class="contact-info">
+                    <h3>Website</h3>
+                    <p><a href="https://www.example.com" target="_blank">www.example.com</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Inclusion du footer depuis footer.html -->
+    <div id="footer-container"></div>
+
+    <!-- Chargement des scripts JavaScript nécessaires -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#header-container').load('header.html', initHeaderFeatures);
+            $('#footer-container').load('footer.html');
+        });
+    </script>
+    <script src="scripts.js"></script>
+</body>
+</html>
